@@ -13,6 +13,8 @@ class TurtleAction(Node):
         self.rotation_client = ActionClient(self, turtlesim.action.RotateAbsolute, 'turtle1/rotate_absolute')
         self.was_spawned = False
         self.is_moving = False
+        self.name2 = "Antek"
+        self.name1 = "Adrian"
         
     def rotate_turtle(self, angle):
         self.is_moving = True
@@ -35,10 +37,10 @@ class TurtleAction(Node):
     def spawn_turtle(self):
         self.get_logger().info('Sending goal to spawn new turtle')
         if self.was_spawned:
-            name = "Antek"
+            name = self.name2
             x = 5.0
         else:
-            name = "Adrian"
+            name = self.name1
             x = 3.0
         request = turtlesim.srv.Spawn.Request(name=name, x=x, y=8.0)
         self.spawn_client.wait_for_service()
@@ -59,7 +61,7 @@ def main(args=None):
     rclpy.init(args=args)
     turtle_action = TurtleAction()
 
-    turtle_action.rotate_turtle(-180)
+    turtle_action.rotate_turtle(180)
     while turtle_action.is_moving:
         rclpy.spin_once(turtle_action)
     sleep(1)
