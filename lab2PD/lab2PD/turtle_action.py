@@ -28,12 +28,11 @@ class TurtleAction(Node):
         if rotation_outcome.accepted:
             self.get_logger().info('Rotation started succesfuly')
             self.rotation_future = rotation_outcome.get_result_async()
-            self.rotation_future.add_done_callback(self.ended_callback)
+            self.rotation_future.add_done_callback(self.rotated_callback)
         else:
             self.get_logger().info('Rotation failed to start')
 
     def spawn_turtle(self):
-        self.is_moving = True
         self.get_logger().info('Sending goal to spawn new turtle')
         if self.was_spawned:
             name = "Antek"
@@ -51,8 +50,8 @@ class TurtleAction(Node):
         self.was_spawned = not self.was_spawned
         self.is_moving = False
     
-    def ended_callback(self, future):
-        self.is_moving = False
+    def rotated_callback(self, future):
+        self.spawn_turtle()
 
 
 
@@ -65,19 +64,9 @@ def main(args=None):
         rclpy.spin_once(turtle_action)
     sleep(1)
 
-    turtle_action.spawn_turtle()
-    while turtle_action.is_moving:
-        rclpy.spin_once(turtle_action)
-    sleep(1)
-
-    turtle_action.rotate_turtle(40)
-    while turtle_action.is_moving:
-        rclpy.spin_once(turtle_action)
     turtle_action.rotate_turtle(270)
     while turtle_action.is_moving:
         rclpy.spin_once(turtle_action)
-    sleep(1)
-    turtle_action.spawn_turtle()
 
 if __name__ == '__main__':
     main()
