@@ -13,8 +13,10 @@ class TurtleAction(Node):
         self.rotation_client = ActionClient(self, turtlesim.action.RotateAbsolute, 'turtle1/rotate_absolute')
         self.was_spawned = False
         self.is_moving = False
-        self.name2 = "Antek"
-        self.name1 = "Adrian"
+        self.declare_parameter('name2', 'Antek')
+        self.name2 = self.get_parameter('name2')
+        self.declare_parameter('name1', 'Adrian')
+        self.name1 = self.get_parameter('name1')
         
     def rotate_turtle(self, angle):
         self.is_moving = True
@@ -42,7 +44,7 @@ class TurtleAction(Node):
         else:
             name = self.name1
             x = 3.0
-        request = turtlesim.srv.Spawn.Request(name=name, x=x, y=8.0)
+        request = turtlesim.srv.Spawn.Request(name=name.value, x=x, y=8.0)
         self.spawn_client.wait_for_service()
         spawn_future = self.spawn_client.call_async(request)
         spawn_future.add_done_callback(self.spawned_callback)
