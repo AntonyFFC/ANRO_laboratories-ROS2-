@@ -13,7 +13,7 @@ def generate_launch_description():
             package='lab2PD',
             executable='turtle_action',
             namespace='turt',
-            name='tact',
+            name='turt_act',
             output='screen',
             emulate_tty=True,
             parameters=[
