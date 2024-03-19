@@ -1,0 +1,3 @@
+[console_scripts]
+turtle_action = lab2PD.turtle_action:main
+
