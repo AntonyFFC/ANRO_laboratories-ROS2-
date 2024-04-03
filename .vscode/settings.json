@@ -1,0 +1,26 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/antek/anro_ws/install/lab2PD/lib/python3.10/site-packages",
+        "/home/antek/anro_ws/install/lab2/lib/python3.10/site-packages",
+        "/home/antek/ros2_ws/install/turtlesim/local/lib/python3.10/dist-packages",
+        "/home/antek/ros2_ws/install/python_parameters/lib/python3.10/site-packages",
+        "/home/antek/ros2_ws/install/py_srvcli/lib/python3.10/site-packages",
+        "/home/antek/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages",
+        "/home/antek/ros2_ws/install/my_package/lib/python3.10/site-packages",
+        "/home/antek/ros2_ws/install/action_tutorials_interfaces/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/antek/anro_ws/install/lab2PD/lib/python3.10/site-packages",
+        "/home/antek/anro_ws/install/lab2/lib/python3.10/site-packages",
+        "/home/antek/ros2_ws/install/turtlesim/local/lib/python3.10/dist-packages",
+        "/home/antek/ros2_ws/install/python_parameters/lib/python3.10/site-packages",
+        "/home/antek/ros2_ws/install/py_srvcli/lib/python3.10/site-packages",
+        "/home/antek/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages",
+        "/home/antek/ros2_ws/install/my_package/lib/python3.10/site-packages",
+        "/home/antek/ros2_ws/install/action_tutorials_interfaces/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}
