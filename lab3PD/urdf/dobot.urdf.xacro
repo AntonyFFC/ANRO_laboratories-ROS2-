@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="dobot">
-    <xacro:property name="values_file" value="$(find lab3PD)/values.yaml"/>
+    <xacro:property name="values_file" value="$(find lab3PD)/urdf/values.yaml"/>
     <xacro:property name="params" value="${xacro.load_yaml(values_file)}"/>
 
     <xacro:property name="l0" value="${params['link']['l0']}"/>

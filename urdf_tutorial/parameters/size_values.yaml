@@ -1,0 +1,35 @@
+robot_description:
+  package: urdf_tutorial
+  file: dobot_visual.urdf.xacro
+
+links_sizes:
+  link0: 0.05
+
+  link1: 0.088
+
+  link2: 0.135
+
+  link3:  0.147
+
+  link4: 0.08
+
+joints_limits:
+  joint0:
+    min: -1.5708
+    max: 1.5708
+
+  joint1:
+    min: 0
+    max: 1.4835
+
+  joint2:
+    min: -0.1745
+    max: 1.5708
+
+  joint3: 
+    min: -1.5708
+    max: 0.1745
+
+  joint4:
+    min: -1.5708
+    max: 1.5708
