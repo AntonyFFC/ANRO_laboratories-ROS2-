@@ -42,11 +42,6 @@ def generate_launch_description():
 
 
     return LaunchDescription([
-        DeclareLaunchArgument(
-            'plot',
-            default_value='false',
-            choices=["true", "false"],
-            description='Launch plot if true'),
         Node(
             package='joint_state_publisher_gui',
             executable='joint_state_publisher_gui',
