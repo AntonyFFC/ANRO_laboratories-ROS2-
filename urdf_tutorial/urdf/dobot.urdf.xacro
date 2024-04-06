@@ -36,6 +36,10 @@
     <color rgba="0.03 0 0.8 1"/>
 </material>
 
+<material name="red">
+    <color rgba="1 0 0 1"/>
+</material>
+
   <xacro:property name="width" value="0.18" />
   <link name="base">
       <visual>
@@ -60,6 +64,22 @@
   <joint name="label_joint" type="fixed">
     <parent link="base"/>
     <child link="front_label"/>
+    <origin xyz="0 0 0"/>
+  </joint>\
+
+  <link name="power_button">
+      <visual>
+        <geometry>
+          <cylinder length="0.003" radius="0.01"/>
+        </geometry>
+        <material name = "red"/>
+        <origin rpy="0 0 0" xyz="${-width/2 + (l0_height - 0.01)/2} ${width/2-0.02} ${l0_height}"/> 
+      </visual>
+  </link>
+
+  <joint name="power_joint" type="fixed">
+    <parent link="base"/>
+    <child link="power_button"/>
     <origin xyz="0 0 0"/>
   </joint>
 
