@@ -37,7 +37,7 @@ def generate_launch_description():
         Node(
             package='rqt_plot',
             executable='rqt_plot',
-            name='rqt_graph_and_joint_state_publisher',
+            name='rqt_plot_node',
             output='screen',
         )
     )
@@ -46,9 +46,17 @@ def generate_launch_description():
         Node(
             package='ForwardKin',
             executable='ForwardKin',
-            name='my_node',
+            name='ForwardKin_node',
         )
     )
 
+    ld.add_action(
+        Node(
+            package='rqt_graph',
+            executable='rqt_graph',
+            name='rqt_graph_node',
+            output='screen',
+        )
+    )
 
     return ld

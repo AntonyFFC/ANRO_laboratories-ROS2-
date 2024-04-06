@@ -151,7 +151,7 @@ Visualization Manager:
       Name: Pose
       Shaft Length: 0.05000000074505806
       Shaft Radius: 0.009999999776482582
-      Shape: Arrow
+      Shape: Axes
       Topic:
         Depth: 5
         Durability Policy: Volatile
@@ -221,10 +221,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.4483199715614319
+      Pitch: 0.328320175409317
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.8395727872848511
+      Yaw: 5.8327412605285645
     Saved: ~
 Window Geometry:
   Displays:
