@@ -2,6 +2,7 @@ from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 from launch_ros.substitutions import FindPackageShare
+from launch_ros.actions import Node
 
 
 def generate_launch_description():
@@ -31,5 +32,14 @@ def generate_launch_description():
             'rviz_config': LaunchConfiguration('rvizconfig'),
             'jsp_gui': LaunchConfiguration('gui')}.items()
     ))
+
+    ld.add_action(
+        Node(
+            package='rqt_plot',
+            executable='rqt_plot',
+            name='rqt_graph_and_joint_state_publisher',
+            output='screen',
+        )
+    )
 
     return ld
