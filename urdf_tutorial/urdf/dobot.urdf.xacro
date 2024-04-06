@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot name="macroedsad" xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:property name="params" value="${xacro.load_yaml('/home/antek/anro_ws/src/urdf_tutorial/parameters/size_values.yaml')}"/>
+  <xacro:property name="params" value="${xacro.load_yaml('$(find urdf_tutorial)/parameters/size_values.yaml')}"/>
   
   <xacro:property name="l0_height" value="${params['links_sizes']['link0']}" />
   <xacro:property name="l1_height" value="${params['links_sizes']['link1']}" />
@@ -192,7 +192,7 @@
   <link name="gripper">
       <visual>
         <geometry>
-          <box size="0.02 0.02 0.03"/>
+          <box size="0.02 0.02 0.04"/>
         </geometry>
         <material name = "blue"/>
         <origin rpy="0 0 0" xyz="0 0 -0.005"/> 
@@ -202,7 +202,7 @@
   <joint name="gripper_joint" type="fixed">
     <parent link="effector_rot_base"/>
     <child link="gripper"/>
-    <origin xyz="0 0 -0.015"/>
+    <origin xyz="0 0 -0.02"/>
   </joint>
 
 </robot>

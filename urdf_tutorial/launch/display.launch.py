@@ -10,7 +10,7 @@ def generate_launch_description():
 
     urdf_tutorial_path = FindPackageShare('urdf_tutorial')
     default_model_path = PathJoinSubstitution(['dobot.urdf.xacro'])
-    default_rviz_config_path = PathJoinSubstitution([urdf_tutorial_path, 'rviz', 'urdf.rviz'])
+    default_rviz_config_path = PathJoinSubstitution([urdf_tutorial_path, 'rviz', 'dobot1.rviz'])
 
     # These parameters are maintained for backwards compatibility
     gui_arg = DeclareLaunchArgument(name='gui', default_value='true', choices=['true', 'false'],
@@ -41,5 +41,14 @@ def generate_launch_description():
             output='screen',
         )
     )
+
+    ld.add_action(
+        Node(
+            package='ForwardKin',
+            executable='ForwardKin',
+            name='my_node',
+        )
+    )
+
 
     return ld
