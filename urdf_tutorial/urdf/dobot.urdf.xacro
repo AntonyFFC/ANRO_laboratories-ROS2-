@@ -50,10 +50,10 @@
   <link name="front_label">
       <visual>
         <geometry>
-          <box size="0.003 ${width-0.01} ${l0_height - 0.01}"/>
+          <box size="${l0_height - 0.02} ${width-0.01} 0.003"/>
         </geometry>
         <material name = "white"/>
-        <origin rpy="0 0 0" xyz="${width/2} 0 ${l0_height / 2}"/> 
+        <origin rpy="0 0 0" xyz="${width/2 - (l0_height - 0.01)/2} 0 ${l0_height}"/> 
       </visual>
   </link>
 
@@ -84,7 +84,7 @@
   <link name="lower_arm">
       <visual>
         <geometry>
-          <cylinder length="${l2_length + 0.04}" radius="0.02"/>
+          <cylinder length="${l2_length + 0.02}" radius="0.02"/>
         </geometry>
         <origin xyz="0 0 ${l2_length/2}" rpy="0 0 0"/>
         <material name="orange"/>
@@ -101,7 +101,17 @@
       </visual>
   </link>
 
-  <joint name="arm_2_joint" type="revolute">
+  <link name="arm_joint_sphere">
+    <visual>
+        <geometry>
+            <sphere radius="0.03"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <material name="blue"/>
+    </visual>
+  </link>
+
+  <joint name="arm_rotbase_joint" type="revolute">
     <axis xyz="0 1 0"/>
     <limit effort="1000.0" lower="${j1_min}" upper="${j1_max}" velocity="0.5"/>
     <parent link="rotating_base"/>
@@ -109,11 +119,17 @@
     <origin xyz="0 0 ${l1_height}"/>
   </joint>
 
-  <joint name="arm_3_joint" type="revolute">
+  <joint name="arm_arm_joint" type="revolute">
     <axis xyz="0 1 0"/>
     <limit effort="1000.0" lower="${j2_min}" upper="${j2_max}" velocity="0.5"/>
     <parent link="lower_arm"/>
     <child link="upper_arm"/>
+    <origin xyz="0 0 ${l2_length}"/>
+  </joint>
+
+  <joint name="sphere_joint" type="fixed">
+    <parent link="lower_arm"/>
+    <child link="arm_joint_sphere"/>
     <origin xyz="0 0 ${l2_length}"/>
   </joint>
 
