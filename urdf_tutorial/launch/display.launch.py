@@ -12,10 +12,6 @@ def generate_launch_description():
     default_model_path = PathJoinSubstitution(['dobot.urdf.xacro'])
     default_rviz_config_path = PathJoinSubstitution([urdf_tutorial_path, 'rviz', 'dobot1.rviz'])
 
-    # These parameters are maintained for backwards compatibility
-    gui_arg = DeclareLaunchArgument(name='gui', default_value='true', choices=['true', 'false'],
-                                    description='Flag to enable joint_state_publisher_gui')
-    ld.add_action(gui_arg)
     rviz_arg = DeclareLaunchArgument(name='rvizconfig', default_value=default_rviz_config_path,
                                      description='Absolute path to rviz config file')
     ld.add_action(rviz_arg)
@@ -29,8 +25,8 @@ def generate_launch_description():
         launch_arguments={
             'urdf_package': 'urdf_tutorial',
             'urdf_package_path': LaunchConfiguration('model'),
-            'rviz_config': LaunchConfiguration('rvizconfig'),
-            'jsp_gui': LaunchConfiguration('gui')}.items()
+            'rviz_config': PathJoinSubstitution([urdf_tutorial_path, 'rviz', LaunchConfiguration('rvizconfig')]),}.items()
+
     ))
 
     ld.add_action(
@@ -56,6 +52,14 @@ def generate_launch_description():
             executable='rqt_graph',
             name='rqt_graph_node',
             output='screen',
+        )
+    )
+
+    ld.add_action(
+        Node(
+            package='lab3',
+            executable='lab3',
+            name='komunikator'
         )
     )
 
