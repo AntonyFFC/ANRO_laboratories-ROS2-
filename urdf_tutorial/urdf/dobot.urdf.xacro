@@ -192,7 +192,7 @@
   <link name="gripper">
       <visual>
         <geometry>
-          <box size="0.02 0.02 0.04"/>
+          <box size="0.015 0.028 0.04"/>
         </geometry>
         <material name = "blue"/>
         <origin rpy="0 0 0" xyz="0 0 -0.005"/> 
@@ -203,6 +203,22 @@
     <parent link="effector_rot_base"/>
     <child link="gripper"/>
     <origin xyz="0 0 -0.02"/>
+  </joint>
+
+  <link name="actuator">
+      <visual>
+        <geometry>
+          <box size="0.015 0.025 0.02"/>
+        </geometry>
+        <material name = "red"/>
+        <origin rpy="0 0 0" xyz="0 0.0125 0"/> 
+      </visual>
+  </link>
+
+  <joint name="actuator_joint" type="fixed">
+    <parent link="gripper"/>
+    <child link="actuator"/>
+    <origin xyz="0 0.016 0"/>
   </joint>
 
 </robot>

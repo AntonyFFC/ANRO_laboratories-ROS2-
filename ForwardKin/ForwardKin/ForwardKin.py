@@ -47,9 +47,9 @@ class ForwardKin(Node):
         ]))
         # T45
         matrixes.append(np.matrix([
-                    [cos(self.angles[4]), -sin(self.angles[4]), 0, 0.03], # this is the length of l4/2 - 0.02 + 0.03
+                    [cos(self.angles[4]), -sin(self.angles[4]), 0, 0.03], # this is the length of l4/2 + 0.03
                     [sin(self.angles[4]), cos(self.angles[4]), 0, 0],
-                    [0, 0, 1, -0.03],
+                    [0, 0, 1, -0.05],
                     [0, 0, 0, 1]                                   
         ]))
         # T56

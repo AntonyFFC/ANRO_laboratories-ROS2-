@@ -1,0 +1,245 @@
+[0.605s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.605s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x74b15123f730>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x74b15123e590>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x74b15123e590>>)
+[0.638s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.638s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.638s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.638s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.638s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.638s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.638s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/student/anro_ws/src'
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.639s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.639s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.639s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.649s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.649s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.649s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.649s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.649s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.649s] Level 1:colcon.colcon_core.package_identification:_identify(ForwardKin) by extensions ['ignore', 'ignore_ament_install']
+[0.649s] Level 1:colcon.colcon_core.package_identification:_identify(ForwardKin) by extension 'ignore'
+[0.650s] Level 1:colcon.colcon_core.package_identification:_identify(ForwardKin) by extension 'ignore_ament_install'
+[0.650s] Level 1:colcon.colcon_core.package_identification:_identify(ForwardKin) by extensions ['colcon_pkg']
+[0.650s] Level 1:colcon.colcon_core.package_identification:_identify(ForwardKin) by extension 'colcon_pkg'
+[0.650s] Level 1:colcon.colcon_core.package_identification:_identify(ForwardKin) by extensions ['colcon_meta']
+[0.650s] Level 1:colcon.colcon_core.package_identification:_identify(ForwardKin) by extension 'colcon_meta'
+[0.650s] Level 1:colcon.colcon_core.package_identification:_identify(ForwardKin) by extensions ['ros']
+[0.650s] Level 1:colcon.colcon_core.package_identification:_identify(ForwardKin) by extension 'ros'
+[0.652s] DEBUG:colcon.colcon_core.package_identification:Package 'ForwardKin' with type 'ros.ament_python' and name 'ForwardKin'
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extensions ['ignore', 'ignore_ament_install']
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extension 'ignore'
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extension 'ignore_ament_install'
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extensions ['colcon_pkg']
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extension 'colcon_pkg'
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extensions ['colcon_meta']
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extension 'colcon_meta'
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extensions ['ros']
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extension 'ros'
+[0.653s] DEBUG:colcon.colcon_core.package_identification:Package 'lab2' with type 'ros.ament_python' and name 'lab2'
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(lab2PD) by extensions ['ignore', 'ignore_ament_install']
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(lab2PD) by extension 'ignore'
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(lab2PD) by extension 'ignore_ament_install'
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(lab2PD) by extensions ['colcon_pkg']
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(lab2PD) by extension 'colcon_pkg'
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(lab2PD) by extensions ['colcon_meta']
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(lab2PD) by extension 'colcon_meta'
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(lab2PD) by extensions ['ros']
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(lab2PD) by extension 'ros'
+[0.654s] DEBUG:colcon.colcon_core.package_identification:Package 'lab2PD' with type 'ros.ament_python' and name 'lab2PD'
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(lab3PD) by extensions ['ignore', 'ignore_ament_install']
+[0.655s] Level 1:colcon.colcon_core.package_identification:_identify(lab3PD) by extension 'ignore'
+[0.655s] Level 1:colcon.colcon_core.package_identification:_identify(lab3PD) by extension 'ignore_ament_install'
+[0.655s] Level 1:colcon.colcon_core.package_identification:_identify(lab3PD) by extensions ['colcon_pkg']
+[0.655s] Level 1:colcon.colcon_core.package_identification:_identify(lab3PD) by extension 'colcon_pkg'
+[0.655s] Level 1:colcon.colcon_core.package_identification:_identify(lab3PD) by extensions ['colcon_meta']
+[0.655s] Level 1:colcon.colcon_core.package_identification:_identify(lab3PD) by extension 'colcon_meta'
+[0.655s] Level 1:colcon.colcon_core.package_identification:_identify(lab3PD) by extensions ['ros']
+[0.655s] Level 1:colcon.colcon_core.package_identification:_identify(lab3PD) by extension 'ros'
+[0.655s] DEBUG:colcon.colcon_core.package_identification:Package 'lab3PD' with type 'ros.ament_python' and name 'lab3PD'
+[0.655s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch) by extensions ['ignore', 'ignore_ament_install']
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch) by extension 'ignore'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch) by extension 'ignore_ament_install'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch) by extensions ['colcon_pkg']
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch) by extension 'colcon_pkg'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch) by extensions ['colcon_meta']
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch) by extension 'colcon_meta'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch) by extensions ['ros']
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch) by extension 'ros'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch) by extensions ['cmake', 'python']
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch) by extension 'cmake'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch) by extension 'python'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch) by extensions ['python_setup_py']
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch) by extension 'python_setup_py'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch/urdf_launch) by extensions ['ignore', 'ignore_ament_install']
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch/urdf_launch) by extension 'ignore'
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch/urdf_launch) by extension 'ignore_ament_install'
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch/urdf_launch) by extensions ['colcon_pkg']
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch/urdf_launch) by extension 'colcon_pkg'
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch/urdf_launch) by extensions ['colcon_meta']
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch/urdf_launch) by extension 'colcon_meta'
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch/urdf_launch) by extensions ['ros']
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch/urdf_launch) by extension 'ros'
+[0.657s] DEBUG:colcon.colcon_core.package_identification:Package 'urdf_launch/urdf_launch' with type 'ros.ament_cmake' and name 'urdf_launch'
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extensions ['ignore', 'ignore_ament_install']
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extension 'ignore'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extension 'ignore_ament_install'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extensions ['colcon_pkg']
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extension 'colcon_pkg'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extensions ['colcon_meta']
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extension 'colcon_meta'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extensions ['ros']
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extension 'ros'
+[0.658s] DEBUG:colcon.colcon_core.package_identification:Package 'urdf_tutorial' with type 'ros.ament_cmake' and name 'urdf_tutorial'
+[0.658s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.658s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.658s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.658s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.658s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.719s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.719s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.736s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/student/anro_ws/install
+[0.736s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.752s] Level 5:colcon.colcon_core.verb:set package 'ForwardKin' build argument 'cmake_args' from command line to 'None'
+[0.752s] Level 5:colcon.colcon_core.verb:set package 'ForwardKin' build argument 'cmake_target' from command line to 'None'
+[0.752s] Level 5:colcon.colcon_core.verb:set package 'ForwardKin' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.753s] Level 5:colcon.colcon_core.verb:set package 'ForwardKin' build argument 'cmake_clean_cache' from command line to 'False'
+[0.753s] Level 5:colcon.colcon_core.verb:set package 'ForwardKin' build argument 'cmake_clean_first' from command line to 'False'
+[0.753s] Level 5:colcon.colcon_core.verb:set package 'ForwardKin' build argument 'cmake_force_configure' from command line to 'False'
+[0.753s] Level 5:colcon.colcon_core.verb:set package 'ForwardKin' build argument 'ament_cmake_args' from command line to 'None'
+[0.753s] Level 5:colcon.colcon_core.verb:set package 'ForwardKin' build argument 'catkin_cmake_args' from command line to 'None'
+[0.753s] Level 5:colcon.colcon_core.verb:set package 'ForwardKin' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.753s] DEBUG:colcon.colcon_core.verb:Building package 'ForwardKin' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student/anro_ws/src/build/ForwardKin', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student/anro_ws/src/install/ForwardKin', 'merge_install': False, 'path': '/home/student/anro_ws/src/ForwardKin', 'symlink_install': False, 'test_result_base': None}
+[0.760s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'cmake_args' from command line to 'None'
+[0.761s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'cmake_target' from command line to 'None'
+[0.761s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.761s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.761s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'cmake_clean_first' from command line to 'False'
+[0.761s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'cmake_force_configure' from command line to 'False'
+[0.761s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'ament_cmake_args' from command line to 'None'
+[0.761s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.761s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.761s] DEBUG:colcon.colcon_core.verb:Building package 'lab2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student/anro_ws/src/build/lab2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student/anro_ws/src/install/lab2', 'merge_install': False, 'path': '/home/student/anro_ws/src/lab2', 'symlink_install': False, 'test_result_base': None}
+[0.769s] Level 5:colcon.colcon_core.verb:set package 'lab2PD' build argument 'cmake_args' from command line to 'None'
+[0.769s] Level 5:colcon.colcon_core.verb:set package 'lab2PD' build argument 'cmake_target' from command line to 'None'
+[0.769s] Level 5:colcon.colcon_core.verb:set package 'lab2PD' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.769s] Level 5:colcon.colcon_core.verb:set package 'lab2PD' build argument 'cmake_clean_cache' from command line to 'False'
+[0.769s] Level 5:colcon.colcon_core.verb:set package 'lab2PD' build argument 'cmake_clean_first' from command line to 'False'
+[0.769s] Level 5:colcon.colcon_core.verb:set package 'lab2PD' build argument 'cmake_force_configure' from command line to 'False'
+[0.769s] Level 5:colcon.colcon_core.verb:set package 'lab2PD' build argument 'ament_cmake_args' from command line to 'None'
+[0.769s] Level 5:colcon.colcon_core.verb:set package 'lab2PD' build argument 'catkin_cmake_args' from command line to 'None'
+[0.769s] Level 5:colcon.colcon_core.verb:set package 'lab2PD' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.769s] DEBUG:colcon.colcon_core.verb:Building package 'lab2PD' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student/anro_ws/src/build/lab2PD', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student/anro_ws/src/install/lab2PD', 'merge_install': False, 'path': '/home/student/anro_ws/src/lab2PD', 'symlink_install': False, 'test_result_base': None}
+[0.777s] Level 5:colcon.colcon_core.verb:set package 'lab3PD' build argument 'cmake_args' from command line to 'None'
+[0.777s] Level 5:colcon.colcon_core.verb:set package 'lab3PD' build argument 'cmake_target' from command line to 'None'
+[0.777s] Level 5:colcon.colcon_core.verb:set package 'lab3PD' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.777s] Level 5:colcon.colcon_core.verb:set package 'lab3PD' build argument 'cmake_clean_cache' from command line to 'False'
+[0.777s] Level 5:colcon.colcon_core.verb:set package 'lab3PD' build argument 'cmake_clean_first' from command line to 'False'
+[0.777s] Level 5:colcon.colcon_core.verb:set package 'lab3PD' build argument 'cmake_force_configure' from command line to 'False'
+[0.777s] Level 5:colcon.colcon_core.verb:set package 'lab3PD' build argument 'ament_cmake_args' from command line to 'None'
+[0.777s] Level 5:colcon.colcon_core.verb:set package 'lab3PD' build argument 'catkin_cmake_args' from command line to 'None'
+[0.777s] Level 5:colcon.colcon_core.verb:set package 'lab3PD' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.777s] DEBUG:colcon.colcon_core.verb:Building package 'lab3PD' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student/anro_ws/src/build/lab3PD', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student/anro_ws/src/install/lab3PD', 'merge_install': False, 'path': '/home/student/anro_ws/src/lab3PD', 'symlink_install': False, 'test_result_base': None}
+[0.785s] Level 5:colcon.colcon_core.verb:set package 'urdf_launch' build argument 'cmake_args' from command line to 'None'
+[0.785s] Level 5:colcon.colcon_core.verb:set package 'urdf_launch' build argument 'cmake_target' from command line to 'None'
+[0.785s] Level 5:colcon.colcon_core.verb:set package 'urdf_launch' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.785s] Level 5:colcon.colcon_core.verb:set package 'urdf_launch' build argument 'cmake_clean_cache' from command line to 'False'
+[0.785s] Level 5:colcon.colcon_core.verb:set package 'urdf_launch' build argument 'cmake_clean_first' from command line to 'False'
+[0.785s] Level 5:colcon.colcon_core.verb:set package 'urdf_launch' build argument 'cmake_force_configure' from command line to 'False'
+[0.785s] Level 5:colcon.colcon_core.verb:set package 'urdf_launch' build argument 'ament_cmake_args' from command line to 'None'
+[0.785s] Level 5:colcon.colcon_core.verb:set package 'urdf_launch' build argument 'catkin_cmake_args' from command line to 'None'
+[0.785s] Level 5:colcon.colcon_core.verb:set package 'urdf_launch' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.785s] DEBUG:colcon.colcon_core.verb:Building package 'urdf_launch' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student/anro_ws/src/build/urdf_launch', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student/anro_ws/src/install/urdf_launch', 'merge_install': False, 'path': '/home/student/anro_ws/src/urdf_launch/urdf_launch', 'symlink_install': False, 'test_result_base': None}
+[0.793s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'cmake_args' from command line to 'None'
+[0.793s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'cmake_target' from command line to 'None'
+[0.793s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.793s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'cmake_clean_cache' from command line to 'False'
+[0.793s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'cmake_clean_first' from command line to 'False'
+[0.793s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'cmake_force_configure' from command line to 'False'
+[0.793s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'ament_cmake_args' from command line to 'None'
+[0.793s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'catkin_cmake_args' from command line to 'None'
+[0.793s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.793s] DEBUG:colcon.colcon_core.verb:Building package 'urdf_tutorial' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student/anro_ws/src/build/urdf_tutorial', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student/anro_ws/src/install/urdf_tutorial', 'merge_install': False, 'path': '/home/student/anro_ws/src/urdf_tutorial', 'symlink_install': False, 'test_result_base': None}
+[0.801s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.809s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.810s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/student/anro_ws/src/urdf_launch/urdf_launch' with build type 'ament_cmake'
+[0.810s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/student/anro_ws/src/urdf_launch/urdf_launch'
+[0.819s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.819s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.819s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.837s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/student/anro_ws/src/ForwardKin' with build type 'ament_python'
+[0.837s] Level 1:colcon.colcon_core.shell:create_environment_hook('ForwardKin', 'ament_prefix_path')
+[0.846s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_ws/src/install/ForwardKin/share/ForwardKin/hook/ament_prefix_path.ps1'
+[0.847s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_ws/src/install/ForwardKin/share/ForwardKin/hook/ament_prefix_path.dsv'
+[0.847s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_ws/src/install/ForwardKin/share/ForwardKin/hook/ament_prefix_path.sh'
+[0.855s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.855s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.873s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/student/anro_ws/src/lab2' with build type 'ament_python'
+[0.873s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab2', 'ament_prefix_path')
+[0.881s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_ws/src/install/lab2/share/lab2/hook/ament_prefix_path.ps1'
+[0.882s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_ws/src/install/lab2/share/lab2/hook/ament_prefix_path.dsv'
+[0.882s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_ws/src/install/lab2/share/lab2/hook/ament_prefix_path.sh'
+[0.890s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.890s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.907s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/student/anro_ws/src/lab2PD' with build type 'ament_python'
+[0.908s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab2PD', 'ament_prefix_path')
+[0.916s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_ws/src/install/lab2PD/share/lab2PD/hook/ament_prefix_path.ps1'
+[0.917s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_ws/src/install/lab2PD/share/lab2PD/hook/ament_prefix_path.dsv'
+[0.917s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_ws/src/install/lab2PD/share/lab2PD/hook/ament_prefix_path.sh'
+[0.925s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.925s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.947s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student/anro_ws/src/build/urdf_launch': /usr/bin/cmake /home/student/anro_ws/src/urdf_launch/urdf_launch -DCMAKE_INSTALL_PREFIX=/home/student/anro_ws/src/install/urdf_launch
+[1.172s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/student/anro_ws/src/ForwardKin'
+[1.181s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.181s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.417s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/student/anro_ws/src/lab2'
+[1.426s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.426s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.654s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/student/anro_ws/src/lab2PD'
+[1.663s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.663s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.681s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student/anro_ws/src/build/urdf_launch' returned '1': /usr/bin/cmake /home/student/anro_ws/src/urdf_launch/urdf_launch -DCMAKE_INSTALL_PREFIX=/home/student/anro_ws/src/install/urdf_launch
+[1.700s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(urdf_launch)
+[1.711s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_ws/src/install/urdf_launch' for CMake module files
+[1.712s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_ws/src/install/urdf_launch' for CMake config files
+[1.712s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_ws/src/install/urdf_launch/bin'
+[1.712s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_ws/src/install/urdf_launch/lib/pkgconfig/urdf_launch.pc'
+[1.712s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_ws/src/install/urdf_launch/lib/python3.10/site-packages'
+[1.713s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_ws/src/install/urdf_launch/bin'
+[1.721s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/package.ps1'
+[1.724s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/package.dsv'
+[1.724s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/package.sh'
+[1.725s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/package.bash'
+[1.726s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/package.zsh'
+[1.727s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student/anro_ws/src/install/urdf_launch/share/colcon-core/packages/urdf_launch)
+[2.076s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.076s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.076s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '1'
+[2.076s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.089s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.089s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.089s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.100s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.109s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/student/anro_ws/src/install/local_setup.ps1'
+[2.110s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/student/anro_ws/src/install/_local_setup_util_ps1.py'
+[2.111s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/student/anro_ws/src/install/setup.ps1'
+[2.120s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/student/anro_ws/src/install/local_setup.sh'
+[2.121s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/student/anro_ws/src/install/_local_setup_util_sh.py'
+[2.121s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/student/anro_ws/src/install/setup.sh'
+[2.131s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/student/anro_ws/src/install/local_setup.bash'
+[2.131s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/student/anro_ws/src/install/setup.bash'
+[2.140s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/student/anro_ws/src/install/local_setup.zsh'
+[2.141s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/student/anro_ws/src/install/setup.zsh'
