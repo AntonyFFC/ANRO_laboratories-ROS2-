@@ -27,10 +27,10 @@ class Komunikator(Node):
         angle1 = self.angles[0]
         angle2 = -self.angles[1]
         angle3 = -self.angles[2]
-        angle5 = -self.angles[3]
+        angle5 = self.angles[3]
         angle3 = angle3 - angle2 
-        angle4 = -angle2 - angle3
-        self.publish_joint_states([angle1, -angle2, -angle3, -angle4, -angle5])
+        angle4 = angle2 + angle3
+        self.publish_joint_states([angle1, -angle2, -angle3, angle4, angle5])
 
     def publish_joint_states(self, answer_vector):
         joint_state = JointState()
