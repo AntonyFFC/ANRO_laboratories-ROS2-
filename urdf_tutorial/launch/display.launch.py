@@ -10,7 +10,12 @@ def generate_launch_description():
 
     urdf_tutorial_path = FindPackageShare('urdf_tutorial')
     default_model_path = PathJoinSubstitution(['dobot.urdf.xacro'])
-    default_rviz_config_path = PathJoinSubstitution([urdf_tutorial_path, 'rviz', 'dobot1.rviz'])
+    default_rviz_config_path = PathJoinSubstitution([urdf_tutorial_path, 'rviz', 'dobot2.rviz'])
+
+    # These parameters are maintained for backwards compatibility
+    gui_arg = DeclareLaunchArgument(name='gui', default_value='true', choices=['true', 'false'],
+                                    description='Flag to enable joint_state_publisher_gui')
+    ld.add_action(gui_arg)
 
     rviz_arg = DeclareLaunchArgument(name='rvizconfig', default_value=default_rviz_config_path,
                                      description='Absolute path to rviz config file')
@@ -25,7 +30,10 @@ def generate_launch_description():
         launch_arguments={
             'urdf_package': 'urdf_tutorial',
             'urdf_package_path': LaunchConfiguration('model'),
-            'rviz_config': PathJoinSubstitution([urdf_tutorial_path, 'rviz', LaunchConfiguration('rvizconfig')]),}.items()
+            'jsp_gui': LaunchConfiguration('gui'),
+            'rviz_config': LaunchConfiguration('rvizconfig'),
+            # 'rviz_config': PathJoinSubstitution([urdf_tutorial_path, 'rviz', LaunchConfiguration('rvizconfig')]),
+            }.items()
 
     ))
 
@@ -57,10 +65,18 @@ def generate_launch_description():
 
     ld.add_action(
         Node(
-            package='lab3',
-            executable='lab3',
-            name='komunikator'
+            package='lab4PD',
+            executable='reverse_kinematics',
+            name='Reverse_Kinematics'
         )
     )
+
+    # ld.add_action(
+    #     Node(
+    #         package='lab3',
+    #         executable='lab3',
+    #         name='komunikator'
+    #     )
+    # )
 
     return ld
