@@ -50,36 +50,20 @@ class Reverse_kinematics(Node):
         angle3 = 0.0
         angle4 = 0.0
         angle5 = 0.0
-        pz = self.z + self.l4 - self.l0 - self.l1
-        px = np.sqrt(self.x**2 + self.y**2) - 0.03
-        alpha = np.arctan2(pz, px)
-        m = np.sqrt(px**2 + pz**2)
 
-        t3_num = m**2 - self.l2**2 - self.l3**2
-        t3_den = 2*self.l2*self.l3
-
-
-        angle3 = np.arccos(t3_num/t3_den) - np.pi/2 
-
-        beta = np.arccos((self.l2**2 + m**2 - self.l3**2)/(2*self.l2*m))
-        
-        angle2 = np.pi/2 - (alpha + beta)
-
-        angle4 = -(angle2 + angle3)
-
-        # az = self.z+0.03-(self.l1+self.l0) # odjęcie wysokosci podstawyself
-        # d = np.sqrt(np.square(self.x)+np.square(self.y)+np.square(az))
-        # c = np.sqrt(np.square(self.x)+np.square(self.y))
-        # h =np.sqrt(np.square(self.x)+np.square(az))
-        # B1 = np.arctan(h/c)
-        # B2 = np.arccos( (np.square(self.l3)-np.square(self.l2)-np.square(d)) / (-2*self.l2*d))
-        # T = np.arccos( (np.square(d)-np.square(self.l2)-np.square(self.l3)) / (-2*self.l2*self.l3))
-        # self.get_logger().info("Clicked Point variables:")
-        # self.get_logger().info(f"az: {az}, d: {d}, c: {c}, h: {h}, B1: {B1}, B2: {B2}, T:{T}")
+        az = self.z+0.05-(self.l1+self.l0) # odjęcie wysokosci podstawy
+        c = np.sqrt(np.square(self.x)+np.square(self.y))- 0.03
+        d = np.sqrt(np.square(c)+np.square(az))
+        h =np.sqrt(np.square(self.x)+np.square(az))
+        B1 = np.arctan(az/c)
+        B2 = np.arccos( (np.square(self.l3)-np.square(self.l2)-np.square(d)) / (-2*self.l2*d))
+        T = np.arccos( (np.square(d)-np.square(self.l2)-np.square(self.l3)) / (-2*self.l2*self.l3))
+        self.get_logger().info("Clicked Point variables:")
+        self.get_logger().info(f"az: {az}, d: {d}, c: {c}, h: {h}, B1: {B1}, B2: {B2}, T:{T}")
         angle1 = np.arctan(self.y/self.x)
-        # angle2 = np.pi/2.0 - B1 -B2
-        # angle3 = np.pi/2.0 - T
-        # angle4 = -angle2-angle3
+        angle2 = np.pi/2.0 - B1 -B2
+        angle3 = np.pi/2.0 - T
+        angle4 = -angle2-angle3
         angle5 = 0.0
 
         if angle1 < -1.548 or angle1 > 1.548 or angle2 < 0 or angle2 > 1.484 or angle3 < -0.175 or angle3 > 1.571:
