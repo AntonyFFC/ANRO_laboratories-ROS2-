@@ -16,12 +16,8 @@ class Move_To_Point(Node):
 
     def __init__(self):
         super().__init__('Move_To_Point')
+        self.move_client = ActionClient(self, PointToPoint, 'PTP_action')
         self.subscription = self.create_subscription(PointStamped,'/clicked_point',self.clicked_point_callback,10)
-        self.action = ActionClient(self, PointToPoint, 'PTP_action')
-
-    def subscriber_callback(self, msg):
-        self.angles = [msg.position[i] for i in range(len(msg.position))]
-        self.calculate_angles()
 
     def clicked_point_callback(self, msg):
         # Extracting coordinates from the message
@@ -36,10 +32,12 @@ class Move_To_Point(Node):
             self.get_logger().info("Received an empty point")
 
         move_goal = PointToPoint.Goal()
-        move_goal.target_pose = [self.x,self.y,self.z]
+        move_goal.target_pose = [200.0,6.0,60.0,0.0]
+        #move_goal.target_pose = [self.x,self.y,self.z, 0.0]
         move_goal.motion_type = 1
         self.get_logger().info('Sending goal to move robot' )
         self.move_client.wait_for_server()
+        self.get_logger().info('connected to server' )
         move_future= self.move_client.send_goal_async(move_goal)
         move_future.add_done_callback(self.move_started_callback)
 
