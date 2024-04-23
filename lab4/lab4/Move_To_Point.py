@@ -31,9 +31,20 @@ class Move_To_Point(Node):
         else:
             self.get_logger().info("Received an empty point")
 
+        if (self.z < 0.06):
+            new_x = 200.0
+            new_y = 6.0
+            new_z = 60.0
+        else:
+            angle = np.arctan2(self.x, self.y)
+        
+            new_x = 1000*(self.x - 0.03*np.sin(angle))
+            new_y = 1000*(self.y - 0.03*np.cos(angle))
+            new_z = 1000*self.z-60
+
         move_goal = PointToPoint.Goal()
-        move_goal.target_pose = [200.0,6.0,60.0,0.0]
-        #move_goal.target_pose = [self.x,self.y,self.z, 0.0]
+        #move_goal.target_pose = [200.0,6.0,60.0,0.0]
+        move_goal.target_pose = [new_x,new_y,new_z, 0.0]
         move_goal.motion_type = 1
         self.get_logger().info('Sending goal to move robot' )
         self.move_client.wait_for_server()
