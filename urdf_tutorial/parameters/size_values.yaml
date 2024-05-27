@@ -13,6 +13,9 @@ links_sizes:
 
   link4: 0.08
 
+  camera_link: 0.06
+
+
 joints_limits:
   joint0:
     min: -1.5708

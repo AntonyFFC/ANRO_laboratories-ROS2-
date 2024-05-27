@@ -8,6 +8,7 @@
   <xacro:property name="l2_length" value="${params['links_sizes']['link2']}" />
   <xacro:property name="l3_length" value="${params['links_sizes']['link3']}"/>
   <xacro:property name="l4_length" value="${params['links_sizes']['link4']}"/>
+  <xacro:property name="camera_distance" value="${params['links_sizes']['camera_link']}"/>
 
   <xacro:property name="j0_min" value="${params['joints_limits']['joint0']['min']}" />
   <xacro:property name="j0_max" value="${params['joints_limits']['joint0']['max']}" />
@@ -110,6 +111,40 @@
         <material name="orange"/>
       </visual>
   </link>
+
+  <link name="camera_link">
+      <visual>
+        <geometry>
+          <box size="${camera_distance/4} 0.012 0.012"/>
+        </geometry>
+        <material name = "blue"/>
+        <origin rpy="0 0 0" xyz="${camera_distance/8} 0 0"/> 
+      </visual>
+  </link>
+
+  <link name="camera">
+      <visual>
+        <geometry>
+          <box size="0.025 0.09 0.025"/>
+        </geometry>
+        <material name = "red"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/> 
+      </visual>
+  </link>
+
+  <joint name="camera_joint" type="fixed">
+    <axis xyz="0 1 0"/>
+    <parent link="effector"/>
+    <child link="camera_link"/>
+    <origin xyz="${l4_length - 0.02} 0 0"/>
+  </joint>
+
+  <joint name="camera_joint2" type="fixed">
+    <axis xyz="0 1 0"/>
+    <parent link="camera_link"/>
+    <child link="camera"/>
+    <origin rpy="3.1415 0 0" xyz="${camera_distance/4} 0 0"/> 
+  </joint>
 
   <link name="upper_arm">
       <visual>
