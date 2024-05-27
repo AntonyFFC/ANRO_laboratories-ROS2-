@@ -143,7 +143,7 @@ class MarkerPublisher(Node):
             marker1.pose.orientation.x = self.paper_rot[0]
             marker1.pose.orientation.y = self.paper_rot[1]
             marker1.pose.orientation.z = self.paper_rot[2]
-            marker1.pose.orientation.w = self.paper_rot[3]  
+            marker1.pose.orientation.w = self.paper_rot[3]
         else:
             marker1.pose.position.x = self.cube_pos.item(0,0)
             marker1.pose.position.y = self.cube_pos.item(0,1)
@@ -158,8 +158,8 @@ class MarkerPublisher(Node):
         marker1.scale.y = 0.02
         marker1.scale.z = 0.02
         
-        marker1.color.r = 0.0
-        marker1.color.g = 1.0
+        marker1.color.r = 1.0
+        marker1.color.g = 0.984
         marker1.color.b = 0.0
         marker1.color.a = 1.0
         
@@ -181,12 +181,12 @@ class MarkerPublisher(Node):
         marker2.pose.orientation.z = self.paper_rot[2]
         marker2.pose.orientation.w = self.paper_rot[3]
         
-        marker2.scale.x = 0.05
-        marker2.scale.y = 0.1
+        marker2.scale.x = 0.1
+        marker2.scale.y = 0.2
         marker2.scale.z = 0.001
-        
-        marker2.color.r = 0.0
-        marker2.color.g = 0.0
+
+        marker2.color.r = 1.0
+        marker2.color.g = 1.0
         marker2.color.b = 1.0
         marker2.color.a = 1.0
 

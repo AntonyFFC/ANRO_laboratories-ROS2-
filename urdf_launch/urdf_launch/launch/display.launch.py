@@ -13,8 +13,8 @@ def generate_launch_description():
 
     urdf_launch_package = FindPackageShare('urdf_launch')
 
-    # ld.add_action(DeclareLaunchArgument(name='jsp_gui', default_value='true', choices=['true', 'false'],
-    #                                     description='Flag to enable joint_state_publisher_gui'))
+    ld.add_action(DeclareLaunchArgument(name='jsp_gui', default_value='true', choices=['true', 'false'],
+                                        description='Flag to enable joint_state_publisher_gui'))
 
 
     default_rviz_config_path = PathJoinSubstitution([urdf_launch_package, 'config', 'urdf.rviz'])
@@ -38,11 +38,11 @@ def generate_launch_description():
         arguments=['-d', LaunchConfiguration('rviz_config')],
     ))
 
-    # ld.add_action(Node(
-    #     package='joint_state_publisher',
-    #     executable='joint_state_publisher',
-    #     condition=UnlessCondition(LaunchConfiguration('jsp_gui'))
-    # ))
+    ld.add_action(Node(
+        package='joint_state_publisher',
+        executable='joint_state_publisher',
+        condition=UnlessCondition(LaunchConfiguration('jsp_gui'))
+    ))
 
     # ld.add_action(Node(
     #     package='joint_state_publisher_gui',

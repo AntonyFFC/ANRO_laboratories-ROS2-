@@ -162,8 +162,8 @@ class RobotPilot(Node):
             marker1.scale.y = 0.02
             marker1.scale.z = 0.02
                 
-            marker1.color.r = 0.0
-            marker1.color.g = 1.0
+            marker1.color.r = 1.0
+            marker1.color.g = 0.984
             marker1.color.b = 0.0
             marker1.color.a = 1.0
                 

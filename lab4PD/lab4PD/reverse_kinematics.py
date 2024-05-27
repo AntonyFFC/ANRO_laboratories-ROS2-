@@ -16,13 +16,20 @@ class Reverse_kinematics(Node):
 
     def __init__(self):
         super().__init__('Reverse_Kinematics')
-        self.subscription = self.create_subscription(PointStamped,'/clicked_point',self.clicked_point_callback,10)
+        # self.subscription = self.create_subscription(PointStamped,'/clicked_point',self.clicked_point_callback,10)
+        self.subscription = self.create_subscription(PointStamped,'dobot_pose',self.clicked_point_callback,10)
         self.publisher = self.create_publisher(JointState, 'joint_states', 10)
+        self.rotation_subscriber = self.create_subscription(JointState, 'tool_rot', self.rotation_callback, 10)
         self.l0 = 0.05
         self.l1 = 0.088
         self.l2 = 0.135
         self.l3 = 0.147
         self.l4 = 0.08
+        self.rotation_angle = 0.0
+
+    def rotation_callback(self, msg: JointState):
+        self.get_logger().info(f"{msg.position[0]}")
+        self.rotation_angle = msg.position[0]
 
     def subscriber_callback(self, msg):
         self.angles = [msg.position[i] for i in range(len(msg.position))]
@@ -64,7 +71,7 @@ class Reverse_kinematics(Node):
         angle2 = np.pi/2.0 - B1 -B2
         angle3 = np.pi/2.0 - T
         angle4 = -angle2-angle3
-        angle5 = 0.0
+        angle5 = self.rotation_angle - angle1 + np.pi/2
 
         if angle1 < -1.548 or angle1 > 1.548 or angle2 < 0 or angle2 > 1.484 or angle3 < -0.175 or angle3 > 1.571:
             angle1 = 0.0

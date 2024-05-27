@@ -34,12 +34,12 @@ class MarkerSender(Node):
 
 
     def generate_markers_position(self):
-        self.cx = 0.25 + random.randint(-4, 4)*0.01
-        self.cy = random.randint(-6, 6)*0.01
+        self.cx = 0.18 + random.randint(-5, 5)*0.01
+        self.cy = random.randint(-10, 10)*0.01
         self.cangle = random.randint(-4, 4)*np.pi/10
 
-        self.px = 0.25 + random.randint(-2, 2)*0.01
-        self.py = random.randint(-2, 2)*0.01
+        self.px = 0.18 + random.randint(-5, 5)*0.01
+        self.py = random.randint(-3, 3)*0.01
         self.pangle = random.randint(-4, 4)*np.pi/10
 
     def finished_callback(self, msg: Bool):
