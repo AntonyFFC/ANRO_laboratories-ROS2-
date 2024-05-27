@@ -1,7 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from visualization_msgs.msg import Marker
-from geometry_msgs.msg import PoseArray, Point
+from geometry_msgs.msg import PoseArray
 from sensor_msgs.msg import JointState
 from std_msgs.msg import Bool
 import numpy as np
@@ -14,11 +14,11 @@ class MarkerPublisher(Node):
     def __init__(self):
         super().__init__('marker_publisher')
         self.joint_subscriber = self.create_subscription(JointState, 'joint_states', self.joint_states_callback, 10)
-        self.m_subscriber = self.create_subscription(PoseArray, 'camera_link', self.pose_callback, 10)
-        self.second_pose_subscriber = self.create_subscription(Bool, 'second_pose', self. sp_callback, 10)
+        self.pose_subscriber = self.create_subscription(PoseArray, 'camera_link', self.pose_callback, 10)
+        self.second_pose_subscriber = self.create_subscription(Bool, 'second_pose', self.second_pose_callback, 10)
         self.finish_subscriber = self.create_subscription(Bool, 'finished', self.finish_callback, 10)
-        self.flag_subscriber = self.create_subscription(Bool , 'important_flag', self.flag_callback, 10)
-        self.m_publisher = self.create_publisher(Marker, 'vizualization_marker', 10)
+        self.flag_subscriber = self.create_subscription(Bool, 'important_flag', self.flag_callback, 10)
+        self.marker_publisher = self.create_publisher(Marker, 'visualization_marker', 10)
         self.finish_publisher = self.create_publisher(Bool, 'finished', 10)
         self.camera_position = []
         self.publish = True
@@ -26,171 +26,158 @@ class MarkerPublisher(Node):
         self.run_back = False
 
     def flag_callback(self, msg: Bool):
-        if msg.data:
-            self.publish = False
-        else:
-            self.publish = True
+        self.publish = not msg.data
 
-    def sp_callback(self, msg: Bool):
-        if msg.data:
-            self.second_pose = True
-    
+    def second_pose_callback(self, msg: Bool):
+        self.second_pose = msg.data
+
     def finish_callback(self, msg: Bool):
         if msg.data:
             self.second_pose = False
             self.publish_marker()
 
-    def joint_states_callback(self ,msg: JointState):
+    def joint_states_callback(self, msg: JointState):
         theta_vector = msg.position
-        joint_count = len(theta_vector)
+        joint_matrices = []
 
-        matrixes = []
-
-        matrixes.append(np.matrix([[cos(theta_vector[0]), -sin(theta_vector[0]), 0, 0],
-                                   [sin(theta_vector[0]), cos(theta_vector[0]), 0, 0],
-                                   [0, 0, 1, 0.05],
-                                   [0, 0, 0, 1]                                   
-                                   ]))
-        
-        matrixes.append(np.matrix([
-                    [cos(theta_vector[1]), 0, sin(theta_vector[1]), 0],
-                    [0, 1, 0, 0],
-                    [-sin(theta_vector[1]), 0, cos(theta_vector[1]), 0.088],
-                    [0, 0, 0, 1]
+        joint_matrices.append(np.matrix([
+            [cos(theta_vector[0]), -sin(theta_vector[0]), 0, 0],
+            [sin(theta_vector[0]), cos(theta_vector[0]), 0, 0],
+            [0, 0, 1, 0.05],
+            [0, 0, 0, 1]
         ]))
 
-        matrixes.append(np.matrix([
-                    [cos(theta_vector[2]), 0, sin(theta_vector[2]), 0],
-                    [0, 1, 0, 0],
-                    [-sin(theta_vector[2]), 0, cos(theta_vector[2]), 0.135],
-                    [0, 0, 0, 1]
+        joint_matrices.append(np.matrix([
+            [cos(theta_vector[1]), 0, sin(theta_vector[1]), 0],
+            [0, 1, 0, 0],
+            [-sin(theta_vector[1]), 0, cos(theta_vector[1]), 0.088],
+            [0, 0, 0, 1]
         ]))
 
-        matrixes.append(np.matrix([
-                    [cos(theta_vector[3]), 0, sin(theta_vector[3]), 0.147],
-                    [0, 1, 0, 0],
-                    [-sin(theta_vector[3]), 0, cos(theta_vector[3]), 0],
-                    [0, 0, 0, 1]
+        joint_matrices.append(np.matrix([
+            [cos(theta_vector[2]), 0, sin(theta_vector[2]), 0],
+            [0, 1, 0, 0],
+            [-sin(theta_vector[2]), 0, cos(theta_vector[2]), 0.135],
+            [0, 0, 0, 1]
         ]))
 
-        matrixes.append(np.matrix([[cos(theta_vector[4]), -sin(theta_vector[4]), 0, 0.03],
-                                   [sin(theta_vector[4]), cos(theta_vector[4]), 0, 0],
-                                   [0, 0, 1, -0.024-0.04-0.005],
-                                   [0, 0, 0, 1]                                   
-                                   ]))
-
-        matrixes.append(np.matrix([
-                    [1, 0, 0, 0],
-                    [0, cos(np.pi), -sin(np.pi), 0],
-                    [0, sin(np.pi), cos(np.pi), 0],
-                    [0, 0, 0, 1]
+        joint_matrices.append(np.matrix([
+            [cos(theta_vector[3]), 0, sin(theta_vector[3]), 0.147],
+            [0, 1, 0, 0],
+            [-sin(theta_vector[3]), 0, cos(theta_vector[3]), 0],
+            [0, 0, 0, 1]
         ]))
-        
 
-        for i in range(joint_count):
-            R = np.matmul(matrixes[i], matrixes[i+1])
-            matrixes[i+1] = R
+        joint_matrices.append(np.matrix([
+            [cos(theta_vector[4]), -sin(theta_vector[4]), 0, 0.03],
+            [sin(theta_vector[4]), cos(theta_vector[4]), 0, 0],
+            [0, 0, 1, -0.069],
+            [0, 0, 0, 1]
+        ]))
 
-        self.tab = matrixes[5]        
-        self.tbc = np.matrix([
+        joint_matrices.append(np.matrix([
+            [1, 0, 0, 0],
+            [0, cos(np.pi), -sin(np.pi), 0],
+            [0, sin(np.pi), cos(np.pi), 0],
+            [0, 0, 0, 1]
+        ]))
+
+        for i in range(len(theta_vector)):
+            R = np.matmul(joint_matrices[i], joint_matrices[i + 1])
+            joint_matrices[i + 1] = R
+
+        self.tab_matrix = joint_matrices[5]
+        self.tbc_matrix = np.matrix([
             [1, 0, 0, camera_effector_difference_x],
             [0, 1, 0, 0],
             [0, 0, 1, -camera_effector_difference_z],
             [0, 0, 0, 1]
         ])
-        self.tac = np.matmul(self.tab, self.tbc)
+        self.tac_matrix = np.matmul(self.tab_matrix, self.tbc_matrix)
 
     def pose_callback(self, msg: PoseArray):
-        for i in range(2):
-            
-            x = msg.poses[i].position.x
-            y = msg.poses[i].position.y
-            z = msg.poses[i].position.z
+        for idx in range(2):
+            x_pos = msg.poses[idx].position.x
+            y_pos = msg.poses[idx].position.y
+            z_pos = msg.poses[idx].position.z
 
-            rx = msg.poses[i].orientation.x
-            ry = msg.poses[i].orientation.y
-            rz = msg.poses[i].orientation.z
-            rw = msg.poses[i].orientation.w
+            x_orient = msg.poses[idx].orientation.x
+            y_orient = msg.poses[idx].orientation.y
+            z_orient = msg.poses[idx].orientation.z
+            w_orient = msg.poses[idx].orientation.w
 
-            in_d = np.array([x, y, z, 1])
+            input_data = np.array([x_pos, y_pos, z_pos, 1])
 
-            if i == 0:
-                self.cube_pos = np.matmul(self.tac, in_d.T)
-                self.cube_rot = [rx, ry, rz, rw]
+            if idx == 0:
+                self.cube_position = np.matmul(self.tac_matrix, input_data.T)
+                self.cube_orientation = [x_orient, y_orient, z_orient, w_orient]
             else:
-                self.paper_pos = np.matmul(self.tac, in_d.T)
-                self.paper_rot = [rx, ry, rz, rw]
+                self.paper_position = np.matmul(self.tac_matrix, input_data.T)
+                self.paper_orientation = [x_orient, y_orient, z_orient, w_orient]
 
         self.publish_marker()
 
     def publish_marker(self):
-        # new_msg = Bool()
-        # new_msg.data = False
-        # self.finish_publisher.publish(new_msg)
-        marker1 = Marker()
-        marker2 = Marker()
-        marker1.header.frame_id = "base"
-        marker1.header.stamp = self.get_clock().now().to_msg()
-        
-        marker1.id = 1
-        marker1.type = Marker.CUBE
-        marker1.action = Marker.ADD
-        
+        marker_cube = Marker()
+        marker_paper = Marker()
+
+        marker_cube.header.frame_id = "base"
+        marker_cube.header.stamp = self.get_clock().now().to_msg()
+        marker_cube.id = 1
+        marker_cube.type = Marker.CUBE
+        marker_cube.action = Marker.ADD
+
         if self.second_pose:
-            marker1.pose.position.x = self.paper_pos.item(0,0)
-            marker1.pose.position.y = self.paper_pos.item(0,1)
-            marker1.pose.position.z = self.cube_pos.item(0,2)
-            marker1.pose.orientation.x = self.paper_rot[0]
-            marker1.pose.orientation.y = self.paper_rot[1]
-            marker1.pose.orientation.z = self.paper_rot[2]
-            marker1.pose.orientation.w = self.paper_rot[3]
+            marker_cube.pose.position.x = self.paper_position.item(0, 0)
+            marker_cube.pose.position.y = self.paper_position.item(0, 1)
+            marker_cube.pose.position.z = self.cube_position.item(0, 2)
+            marker_cube.pose.orientation.x = self.paper_orientation[0]
+            marker_cube.pose.orientation.y = self.paper_orientation[1]
+            marker_cube.pose.orientation.z = self.paper_orientation[2]
+            marker_cube.pose.orientation.w = self.paper_orientation[3]
         else:
-            marker1.pose.position.x = self.cube_pos.item(0,0)
-            marker1.pose.position.y = self.cube_pos.item(0,1)
-            marker1.pose.position.z = self.cube_pos.item(0,2)
-            marker1.pose.orientation.x = self.cube_rot[0]
-            marker1.pose.orientation.y = self.cube_rot[1]
-            marker1.pose.orientation.z = self.cube_rot[2]
-            marker1.pose.orientation.w = self.cube_rot[3]
+            marker_cube.pose.position.x = self.cube_position.item(0, 0)
+            marker_cube.pose.position.y = self.cube_position.item(0, 1)
+            marker_cube.pose.position.z = self.cube_position.item(0, 2)
+            marker_cube.pose.orientation.x = self.cube_orientation[0]
+            marker_cube.pose.orientation.y = self.cube_orientation[1]
+            marker_cube.pose.orientation.z = self.cube_orientation[2]
+            marker_cube.pose.orientation.w = self.cube_orientation[3]
 
-        
-        marker1.scale.x = 0.02
-        marker1.scale.y = 0.02
-        marker1.scale.z = 0.02
-        
-        marker1.color.r = 1.0
-        marker1.color.g = 0.984
-        marker1.color.b = 0.0
-        marker1.color.a = 1.0
-        
+        marker_cube.scale.x = 0.02
+        marker_cube.scale.y = 0.02
+        marker_cube.scale.z = 0.02
+        marker_cube.color.r = 1.0
+        marker_cube.color.g = 0.984
+        marker_cube.color.b = 0.0
+        marker_cube.color.a = 1.0
+
         if self.publish:
-            self.m_publisher.publish(marker1)
+            self.marker_publisher.publish(marker_cube)
 
-        marker2.header.frame_id = "base"
-        marker2.header.stamp = self.get_clock().now().to_msg()
-        
-        marker2.id = 2
-        marker2.type = Marker.CUBE
-        marker2.action = Marker.ADD
-        
-        marker2.pose.position.x = self.paper_pos.item(0,0)
-        marker2.pose.position.y = self.paper_pos.item(0,1)
-        marker2.pose.position.z = self.paper_pos.item(0,2)
-        marker2.pose.orientation.x = self.paper_rot[0]
-        marker2.pose.orientation.y = self.paper_rot[1]
-        marker2.pose.orientation.z = self.paper_rot[2]
-        marker2.pose.orientation.w = self.paper_rot[3]
-        
-        marker2.scale.x = 0.1
-        marker2.scale.y = 0.2
-        marker2.scale.z = 0.001
+        marker_paper.header.frame_id = "base"
+        marker_paper.header.stamp = self.get_clock().now().to_msg()
+        marker_paper.id = 2
+        marker_paper.type = Marker.CUBE
+        marker_paper.action = Marker.ADD
 
-        marker2.color.r = 1.0
-        marker2.color.g = 1.0
-        marker2.color.b = 1.0
-        marker2.color.a = 1.0
+        marker_paper.pose.position.x = self.paper_position.item(0, 0)
+        marker_paper.pose.position.y = self.paper_position.item(0, 1)
+        marker_paper.pose.position.z = self.paper_position.item(0, 2)
+        marker_paper.pose.orientation.x = self.paper_orientation[0]
+        marker_paper.pose.orientation.y = self.paper_orientation[1]
+        marker_paper.pose.orientation.z = self.paper_orientation[2]
+        marker_paper.pose.orientation.w = self.paper_orientation[3]
 
-        self.m_publisher.publish(marker2)
+        marker_paper.scale.x = 0.1
+        marker_paper.scale.y = 0.2
+        marker_paper.scale.z = 0.001
+        marker_paper.color.r = 1.0
+        marker_paper.color.g = 1.0
+        marker_paper.color.b = 1.0
+        marker_paper.color.a = 1.0
+
+        self.marker_publisher.publish(marker_paper)
 
 def main(args=None):
     rclpy.init(args=args)
