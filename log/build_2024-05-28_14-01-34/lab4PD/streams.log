@@ -1,0 +1,22 @@
+[2.222s] Invoking command in '/home/student/anro_ws/src/lab4PD': PYTHONPATH=/home/student/anro_ws/src/build/lab4PD/prefix_override:/home/student/anro_ws/src/install/lab4PD/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lab4PD build --build-base /home/student/anro_ws/src/build/lab4PD/build install --record /home/student/anro_ws/src/build/lab4PD/install.log --single-version-externally-managed
+[2.593s] running egg_info
+[2.594s] writing ../build/lab4PD/lab4PD.egg-info/PKG-INFO
+[2.594s] writing dependency_links to ../build/lab4PD/lab4PD.egg-info/dependency_links.txt
+[2.594s] writing entry points to ../build/lab4PD/lab4PD.egg-info/entry_points.txt
+[2.595s] writing requirements to ../build/lab4PD/lab4PD.egg-info/requires.txt
+[2.595s] writing top-level names to ../build/lab4PD/lab4PD.egg-info/top_level.txt
+[2.596s] reading manifest file '../build/lab4PD/lab4PD.egg-info/SOURCES.txt'
+[2.597s] adding license file 'LICENSE'
+[2.598s] writing manifest file '../build/lab4PD/lab4PD.egg-info/SOURCES.txt'
+[2.598s] running build
+[2.598s] running build_py
+[2.599s] running install
+[2.599s] running install_lib
+[2.600s] running install_data
+[2.600s] running install_egg_info
+[2.601s] removing '/home/student/anro_ws/src/install/lab4PD/lib/python3.10/site-packages/lab4PD-0.0.0-py3.10.egg-info' (and everything under it)
+[2.601s] Copying ../build/lab4PD/lab4PD.egg-info to /home/student/anro_ws/src/install/lab4PD/lib/python3.10/site-packages/lab4PD-0.0.0-py3.10.egg-info
+[2.602s] running install_scripts
+[2.625s] Installing reverse_kinematics script to /home/student/anro_ws/src/install/lab4PD/lib/lab4PD
+[2.625s] writing list of installed files to '/home/student/anro_ws/src/build/lab4PD/install.log'
+[2.837s] Invoked command in '/home/student/anro_ws/src/lab4PD' returned '0': PYTHONPATH=/home/student/anro_ws/src/build/lab4PD/prefix_override:/home/student/anro_ws/src/install/lab4PD/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lab4PD build --build-base /home/student/anro_ws/src/build/lab4PD/build install --record /home/student/anro_ws/src/build/lab4PD/install.log --single-version-externally-managed

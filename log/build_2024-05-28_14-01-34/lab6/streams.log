@@ -1,0 +1,38 @@
+[1.620s] Invoking command in '/home/student/anro_ws/src/lab6': PYTHONPATH=/home/student/anro_ws/src/build/lab6/prefix_override:/home/student/anro_ws/src/install/lab6/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lab6 build --build-base /home/student/anro_ws/src/build/lab6/build install --record /home/student/anro_ws/src/build/lab6/install.log --single-version-externally-managed
+[1.936s] running egg_info
+[1.938s] creating ../build/lab6/lab6.egg-info
+[1.939s] writing ../build/lab6/lab6.egg-info/PKG-INFO
+[1.939s] writing dependency_links to ../build/lab6/lab6.egg-info/dependency_links.txt
+[1.939s] writing entry points to ../build/lab6/lab6.egg-info/entry_points.txt
+[1.940s] writing requirements to ../build/lab6/lab6.egg-info/requires.txt
+[1.940s] writing top-level names to ../build/lab6/lab6.egg-info/top_level.txt
+[1.940s] writing manifest file '../build/lab6/lab6.egg-info/SOURCES.txt'
+[1.943s] reading manifest file '../build/lab6/lab6.egg-info/SOURCES.txt'
+[1.943s] adding license file 'LICENSE'
+[1.944s] writing manifest file '../build/lab6/lab6.egg-info/SOURCES.txt'
+[1.944s] running build
+[1.944s] running build_py
+[1.945s] creating /home/student/anro_ws/src/build/lab6/build
+[1.945s] creating /home/student/anro_ws/src/build/lab6/build/lib
+[1.945s] creating /home/student/anro_ws/src/build/lab6/build/lib/lab6
+[1.945s] copying lab6/__init__.py -> /home/student/anro_ws/src/build/lab6/build/lib/lab6
+[1.945s] copying lab6/marker_broker.py -> /home/student/anro_ws/src/build/lab6/build/lib/lab6
+[1.946s] running install
+[1.946s] running install_lib
+[1.947s] creating /home/student/anro_ws/src/install/lab6/lib/python3.10/site-packages/lab6
+[1.948s] copying /home/student/anro_ws/src/build/lab6/build/lib/lab6/__init__.py -> /home/student/anro_ws/src/install/lab6/lib/python3.10/site-packages/lab6
+[1.948s] copying /home/student/anro_ws/src/build/lab6/build/lib/lab6/marker_broker.py -> /home/student/anro_ws/src/install/lab6/lib/python3.10/site-packages/lab6
+[1.949s] byte-compiling /home/student/anro_ws/src/install/lab6/lib/python3.10/site-packages/lab6/__init__.py to __init__.cpython-310.pyc
+[1.949s] byte-compiling /home/student/anro_ws/src/install/lab6/lib/python3.10/site-packages/lab6/marker_broker.py to marker_broker.cpython-310.pyc
+[1.951s] running install_data
+[1.952s] creating /home/student/anro_ws/src/install/lab6/share/ament_index
+[1.952s] creating /home/student/anro_ws/src/install/lab6/share/ament_index/resource_index
+[1.953s] creating /home/student/anro_ws/src/install/lab6/share/ament_index/resource_index/packages
+[1.954s] copying resource/lab6 -> /home/student/anro_ws/src/install/lab6/share/ament_index/resource_index/packages
+[1.954s] copying package.xml -> /home/student/anro_ws/src/install/lab6/share/lab6
+[1.954s] running install_egg_info
+[1.956s] Copying ../build/lab6/lab6.egg-info to /home/student/anro_ws/src/install/lab6/lib/python3.10/site-packages/lab6-0.0.0-py3.10.egg-info
+[1.956s] running install_scripts
+[1.983s] Installing marker_broker script to /home/student/anro_ws/src/install/lab6/lib/lab6
+[1.983s] writing list of installed files to '/home/student/anro_ws/src/build/lab6/install.log'
+[2.062s] Invoked command in '/home/student/anro_ws/src/lab6' returned '0': PYTHONPATH=/home/student/anro_ws/src/build/lab6/prefix_override:/home/student/anro_ws/src/install/lab6/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lab6 build --build-base /home/student/anro_ws/src/build/lab6/build install --record /home/student/anro_ws/src/build/lab6/install.log --single-version-externally-managed

@@ -1,0 +1,27 @@
+[1.297s] Invoking command in '/home/student/anro_ws/src/lab6PD': PYTHONPATH=/home/student/anro_ws/src/build/lab6PD/prefix_override:/home/student/anro_ws/src/install/lab6PD/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lab6PD build --build-base /home/student/anro_ws/src/build/lab6PD/build install --record /home/student/anro_ws/src/build/lab6PD/install.log --single-version-externally-managed
+[1.589s] running egg_info
+[1.590s] writing ../build/lab6PD/lab6PD.egg-info/PKG-INFO
+[1.590s] writing dependency_links to ../build/lab6PD/lab6PD.egg-info/dependency_links.txt
+[1.590s] writing entry points to ../build/lab6PD/lab6PD.egg-info/entry_points.txt
+[1.591s] writing requirements to ../build/lab6PD/lab6PD.egg-info/requires.txt
+[1.591s] writing top-level names to ../build/lab6PD/lab6PD.egg-info/top_level.txt
+[1.592s] reading manifest file '../build/lab6PD/lab6PD.egg-info/SOURCES.txt'
+[1.593s] adding license file 'LICENSE'
+[1.593s] writing manifest file '../build/lab6PD/lab6PD.egg-info/SOURCES.txt'
+[1.593s] running build
+[1.593s] running build_py
+[1.594s] copying lab6PD/robot_pilot.py -> /home/student/anro_ws/src/build/lab6PD/build/lib/lab6PD
+[1.594s] running install
+[1.594s] running install_lib
+[1.595s] copying /home/student/anro_ws/src/build/lab6PD/build/lib/lab6PD/robot_pilot.py -> /home/student/anro_ws/src/install/lab6PD/lib/python3.10/site-packages/lab6PD
+[1.596s] byte-compiling /home/student/anro_ws/src/install/lab6PD/lib/python3.10/site-packages/lab6PD/robot_pilot.py to robot_pilot.cpython-310.pyc
+[1.599s] running install_data
+[1.600s] running install_egg_info
+[1.601s] removing '/home/student/anro_ws/src/install/lab6PD/lib/python3.10/site-packages/lab6PD-0.0.0-py3.10.egg-info' (and everything under it)
+[1.602s] Copying ../build/lab6PD/lab6PD.egg-info to /home/student/anro_ws/src/install/lab6PD/lib/python3.10/site-packages/lab6PD-0.0.0-py3.10.egg-info
+[1.603s] running install_scripts
+[1.627s] Installing marker_publisher script to /home/student/anro_ws/src/install/lab6PD/lib/lab6PD
+[1.627s] Installing marker_sender script to /home/student/anro_ws/src/install/lab6PD/lib/lab6PD
+[1.628s] Installing robot_pilot script to /home/student/anro_ws/src/install/lab6PD/lib/lab6PD
+[1.628s] writing list of installed files to '/home/student/anro_ws/src/build/lab6PD/install.log'
+[1.667s] Invoked command in '/home/student/anro_ws/src/lab6PD' returned '0': PYTHONPATH=/home/student/anro_ws/src/build/lab6PD/prefix_override:/home/student/anro_ws/src/install/lab6PD/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lab6PD build --build-base /home/student/anro_ws/src/build/lab6PD/build install --record /home/student/anro_ws/src/build/lab6PD/install.log --single-version-externally-managed

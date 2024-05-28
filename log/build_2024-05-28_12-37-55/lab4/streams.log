@@ -1,0 +1,38 @@
+[1.880s] Invoking command in '/home/student/anro_ws/src/lab4': PYTHONPATH=/home/student/anro_ws/src/build/lab4/prefix_override:/home/student/anro_ws/src/install/lab4/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lab4 build --build-base /home/student/anro_ws/src/build/lab4/build install --record /home/student/anro_ws/src/build/lab4/install.log --single-version-externally-managed
+[2.176s] running egg_info
+[2.177s] creating ../build/lab4/lab4.egg-info
+[2.177s] writing ../build/lab4/lab4.egg-info/PKG-INFO
+[2.177s] writing dependency_links to ../build/lab4/lab4.egg-info/dependency_links.txt
+[2.177s] writing entry points to ../build/lab4/lab4.egg-info/entry_points.txt
+[2.178s] writing requirements to ../build/lab4/lab4.egg-info/requires.txt
+[2.178s] writing top-level names to ../build/lab4/lab4.egg-info/top_level.txt
+[2.178s] writing manifest file '../build/lab4/lab4.egg-info/SOURCES.txt'
+[2.179s] reading manifest file '../build/lab4/lab4.egg-info/SOURCES.txt'
+[2.180s] adding license file 'LICENSE'
+[2.180s] writing manifest file '../build/lab4/lab4.egg-info/SOURCES.txt'
+[2.180s] running build
+[2.180s] running build_py
+[2.180s] creating /home/student/anro_ws/src/build/lab4/build
+[2.181s] creating /home/student/anro_ws/src/build/lab4/build/lib
+[2.181s] creating /home/student/anro_ws/src/build/lab4/build/lib/lab4
+[2.181s] copying lab4/__init__.py -> /home/student/anro_ws/src/build/lab4/build/lib/lab4
+[2.181s] copying lab4/Move_To_Point.py -> /home/student/anro_ws/src/build/lab4/build/lib/lab4
+[2.181s] running install
+[2.181s] running install_lib
+[2.182s] creating /home/student/anro_ws/src/install/lab4/lib/python3.10/site-packages/lab4
+[2.182s] copying /home/student/anro_ws/src/build/lab4/build/lib/lab4/__init__.py -> /home/student/anro_ws/src/install/lab4/lib/python3.10/site-packages/lab4
+[2.182s] copying /home/student/anro_ws/src/build/lab4/build/lib/lab4/Move_To_Point.py -> /home/student/anro_ws/src/install/lab4/lib/python3.10/site-packages/lab4
+[2.183s] byte-compiling /home/student/anro_ws/src/install/lab4/lib/python3.10/site-packages/lab4/__init__.py to __init__.cpython-310.pyc
+[2.183s] byte-compiling /home/student/anro_ws/src/install/lab4/lib/python3.10/site-packages/lab4/Move_To_Point.py to Move_To_Point.cpython-310.pyc
+[2.183s] running install_data
+[2.188s] creating /home/student/anro_ws/src/install/lab4/share/ament_index
+[2.188s] creating /home/student/anro_ws/src/install/lab4/share/ament_index/resource_index
+[2.188s] creating /home/student/anro_ws/src/install/lab4/share/ament_index/resource_index/packages
+[2.188s] copying resource/lab4 -> /home/student/anro_ws/src/install/lab4/share/ament_index/resource_index/packages
+[2.188s] copying package.xml -> /home/student/anro_ws/src/install/lab4/share/lab4
+[2.188s] running install_egg_info
+[2.190s] Copying ../build/lab4/lab4.egg-info to /home/student/anro_ws/src/install/lab4/lib/python3.10/site-packages/lab4-0.0.0-py3.10.egg-info
+[2.191s] running install_scripts
+[2.215s] Installing Move_To_Point script to /home/student/anro_ws/src/install/lab4/lib/lab4
+[2.215s] writing list of installed files to '/home/student/anro_ws/src/build/lab4/install.log'
+[2.444s] Invoked command in '/home/student/anro_ws/src/lab4' returned '0': PYTHONPATH=/home/student/anro_ws/src/build/lab4/prefix_override:/home/student/anro_ws/src/install/lab4/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lab4 build --build-base /home/student/anro_ws/src/build/lab4/build install --record /home/student/anro_ws/src/build/lab4/install.log --single-version-externally-managed

@@ -1,0 +1,3 @@
+[console_scripts]
+lab3 = lab3.komunikator:main
+

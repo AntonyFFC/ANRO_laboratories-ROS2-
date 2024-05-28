@@ -1,0 +1,21 @@
+[2.194s] Invoking command in '/home/student/anro_ws/src/lab2PD': PYTHONPATH=/home/student/anro_ws/src/build/lab2PD/prefix_override:/home/student/anro_ws/src/install/lab2PD/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lab2PD build --build-base /home/student/anro_ws/src/build/lab2PD/build install --record /home/student/anro_ws/src/build/lab2PD/install.log --single-version-externally-managed
+[2.555s] running egg_info
+[2.557s] writing ../build/lab2PD/lab2PD.egg-info/PKG-INFO
+[2.557s] writing dependency_links to ../build/lab2PD/lab2PD.egg-info/dependency_links.txt
+[2.557s] writing entry points to ../build/lab2PD/lab2PD.egg-info/entry_points.txt
+[2.557s] writing requirements to ../build/lab2PD/lab2PD.egg-info/requires.txt
+[2.558s] writing top-level names to ../build/lab2PD/lab2PD.egg-info/top_level.txt
+[2.559s] reading manifest file '../build/lab2PD/lab2PD.egg-info/SOURCES.txt'
+[2.560s] writing manifest file '../build/lab2PD/lab2PD.egg-info/SOURCES.txt'
+[2.561s] running build
+[2.561s] running build_py
+[2.561s] running install
+[2.561s] running install_lib
+[2.562s] running install_data
+[2.563s] running install_egg_info
+[2.565s] removing '/home/student/anro_ws/src/install/lab2PD/lib/python3.10/site-packages/lab2PD-0.0.0-py3.10.egg-info' (and everything under it)
+[2.576s] Copying ../build/lab2PD/lab2PD.egg-info to /home/student/anro_ws/src/install/lab2PD/lib/python3.10/site-packages/lab2PD-0.0.0-py3.10.egg-info
+[2.576s] running install_scripts
+[2.603s] Installing turtle_action script to /home/student/anro_ws/src/install/lab2PD/lib/lab2PD
+[2.604s] writing list of installed files to '/home/student/anro_ws/src/build/lab2PD/install.log'
+[2.854s] Invoked command in '/home/student/anro_ws/src/lab2PD' returned '0': PYTHONPATH=/home/student/anro_ws/src/build/lab2PD/prefix_override:/home/student/anro_ws/src/install/lab2PD/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lab2PD build --build-base /home/student/anro_ws/src/build/lab2PD/build install --record /home/student/anro_ws/src/build/lab2PD/install.log --single-version-externally-managed

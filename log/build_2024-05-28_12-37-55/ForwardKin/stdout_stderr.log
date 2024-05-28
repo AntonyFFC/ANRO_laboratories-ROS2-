@@ -1,0 +1,37 @@
+running egg_info
+creating ../build/ForwardKin/ForwardKin.egg-info
+writing ../build/ForwardKin/ForwardKin.egg-info/PKG-INFO
+writing dependency_links to ../build/ForwardKin/ForwardKin.egg-info/dependency_links.txt
+writing entry points to ../build/ForwardKin/ForwardKin.egg-info/entry_points.txt
+writing requirements to ../build/ForwardKin/ForwardKin.egg-info/requires.txt
+writing top-level names to ../build/ForwardKin/ForwardKin.egg-info/top_level.txt
+writing manifest file '../build/ForwardKin/ForwardKin.egg-info/SOURCES.txt'
+reading manifest file '../build/ForwardKin/ForwardKin.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../build/ForwardKin/ForwardKin.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/student/anro_ws/src/build/ForwardKin/build
+creating /home/student/anro_ws/src/build/ForwardKin/build/lib
+creating /home/student/anro_ws/src/build/ForwardKin/build/lib/ForwardKin
+copying ForwardKin/__init__.py -> /home/student/anro_ws/src/build/ForwardKin/build/lib/ForwardKin
+copying ForwardKin/ForwardKin.py -> /home/student/anro_ws/src/build/ForwardKin/build/lib/ForwardKin
+running install
+running install_lib
+creating /home/student/anro_ws/src/install/ForwardKin/lib/python3.10/site-packages/ForwardKin
+copying /home/student/anro_ws/src/build/ForwardKin/build/lib/ForwardKin/__init__.py -> /home/student/anro_ws/src/install/ForwardKin/lib/python3.10/site-packages/ForwardKin
+copying /home/student/anro_ws/src/build/ForwardKin/build/lib/ForwardKin/ForwardKin.py -> /home/student/anro_ws/src/install/ForwardKin/lib/python3.10/site-packages/ForwardKin
+byte-compiling /home/student/anro_ws/src/install/ForwardKin/lib/python3.10/site-packages/ForwardKin/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/student/anro_ws/src/install/ForwardKin/lib/python3.10/site-packages/ForwardKin/ForwardKin.py to ForwardKin.cpython-310.pyc
+running install_data
+creating /home/student/anro_ws/src/install/ForwardKin/share/ament_index
+creating /home/student/anro_ws/src/install/ForwardKin/share/ament_index/resource_index
+creating /home/student/anro_ws/src/install/ForwardKin/share/ament_index/resource_index/packages
+copying resource/ForwardKin -> /home/student/anro_ws/src/install/ForwardKin/share/ament_index/resource_index/packages
+copying package.xml -> /home/student/anro_ws/src/install/ForwardKin/share/ForwardKin
+creating /home/student/anro_ws/src/install/ForwardKin/share/ForwardKin/launch
+running install_egg_info
+Copying ../build/ForwardKin/ForwardKin.egg-info to /home/student/anro_ws/src/install/ForwardKin/lib/python3.10/site-packages/ForwardKin-0.0.0-py3.10.egg-info
+running install_scripts
+Installing ForwardKin script to /home/student/anro_ws/src/install/ForwardKin/lib/ForwardKin
+writing list of installed files to '/home/student/anro_ws/src/build/ForwardKin/install.log'

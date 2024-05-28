@@ -1,0 +1,3 @@
+[console_scripts]
+Move_To_Point = lab4.Move_To_Point:main
+

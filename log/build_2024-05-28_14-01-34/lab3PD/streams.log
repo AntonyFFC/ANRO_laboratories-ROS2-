@@ -1,0 +1,21 @@
+[2.576s] Invoking command in '/home/student/anro_ws/src/lab3PD': PYTHONPATH=/home/student/anro_ws/src/build/lab3PD/prefix_override:/home/student/anro_ws/src/install/lab3PD/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lab3PD build --build-base /home/student/anro_ws/src/build/lab3PD/build install --record /home/student/anro_ws/src/build/lab3PD/install.log --single-version-externally-managed
+[2.904s] running egg_info
+[2.905s] writing ../build/lab3PD/lab3PD.egg-info/PKG-INFO
+[2.906s] writing dependency_links to ../build/lab3PD/lab3PD.egg-info/dependency_links.txt
+[2.906s] writing entry points to ../build/lab3PD/lab3PD.egg-info/entry_points.txt
+[2.907s] writing requirements to ../build/lab3PD/lab3PD.egg-info/requires.txt
+[2.907s] writing top-level names to ../build/lab3PD/lab3PD.egg-info/top_level.txt
+[2.907s] reading manifest file '../build/lab3PD/lab3PD.egg-info/SOURCES.txt'
+[2.908s] adding license file 'LICENSE'
+[2.908s] writing manifest file '../build/lab3PD/lab3PD.egg-info/SOURCES.txt'
+[2.909s] running build
+[2.909s] running build_py
+[2.910s] running install
+[2.910s] running install_lib
+[2.911s] running install_data
+[2.911s] running install_egg_info
+[2.912s] removing '/home/student/anro_ws/src/install/lab3PD/lib/python3.10/site-packages/lab3PD-0.0.0-py3.10.egg-info' (and everything under it)
+[2.913s] Copying ../build/lab3PD/lab3PD.egg-info to /home/student/anro_ws/src/install/lab3PD/lib/python3.10/site-packages/lab3PD-0.0.0-py3.10.egg-info
+[2.913s] running install_scripts
+[2.939s] writing list of installed files to '/home/student/anro_ws/src/build/lab3PD/install.log'
+[2.990s] Invoked command in '/home/student/anro_ws/src/lab3PD' returned '0': PYTHONPATH=/home/student/anro_ws/src/build/lab3PD/prefix_override:/home/student/anro_ws/src/install/lab3PD/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lab3PD build --build-base /home/student/anro_ws/src/build/lab3PD/build install --record /home/student/anro_ws/src/build/lab3PD/install.log --single-version-externally-managed

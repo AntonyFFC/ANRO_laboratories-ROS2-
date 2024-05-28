@@ -1,0 +1,21 @@
+[2.309s] Invoking command in '/home/student/anro_ws/src/lab2': PYTHONPATH=/home/student/anro_ws/src/build/lab2/prefix_override:/home/student/anro_ws/src/install/lab2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lab2 build --build-base /home/student/anro_ws/src/build/lab2/build install --record /home/student/anro_ws/src/build/lab2/install.log --single-version-externally-managed
+[2.745s] running egg_info
+[2.748s] writing ../build/lab2/lab2.egg-info/PKG-INFO
+[2.748s] writing dependency_links to ../build/lab2/lab2.egg-info/dependency_links.txt
+[2.749s] writing entry points to ../build/lab2/lab2.egg-info/entry_points.txt
+[2.754s] writing requirements to ../build/lab2/lab2.egg-info/requires.txt
+[2.755s] writing top-level names to ../build/lab2/lab2.egg-info/top_level.txt
+[2.755s] reading manifest file '../build/lab2/lab2.egg-info/SOURCES.txt'
+[2.755s] writing manifest file '../build/lab2/lab2.egg-info/SOURCES.txt'
+[2.755s] running build
+[2.755s] running build_py
+[2.762s] running install
+[2.765s] running install_lib
+[2.767s] running install_data
+[2.768s] running install_egg_info
+[2.770s] removing '/home/student/anro_ws/src/install/lab2/lib/python3.10/site-packages/lab2-0.0.0-py3.10.egg-info' (and everything under it)
+[2.771s] Copying ../build/lab2/lab2.egg-info to /home/student/anro_ws/src/install/lab2/lib/python3.10/site-packages/lab2-0.0.0-py3.10.egg-info
+[2.772s] running install_scripts
+[2.809s] Installing wieza script to /home/student/anro_ws/src/install/lab2/lib/lab2
+[2.809s] writing list of installed files to '/home/student/anro_ws/src/build/lab2/install.log'
+[3.028s] Invoked command in '/home/student/anro_ws/src/lab2' returned '0': PYTHONPATH=/home/student/anro_ws/src/build/lab2/prefix_override:/home/student/anro_ws/src/install/lab2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lab2 build --build-base /home/student/anro_ws/src/build/lab2/build install --record /home/student/anro_ws/src/build/lab2/install.log --single-version-externally-managed

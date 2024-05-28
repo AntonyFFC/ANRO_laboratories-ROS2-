@@ -1,0 +1,22 @@
+[1.396s] Invoking command in '/home/student/anro_ws/src/lab3': PYTHONPATH=/home/student/anro_ws/src/build/lab3/prefix_override:/home/student/anro_ws/src/install/lab3/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lab3 build --build-base /home/student/anro_ws/src/build/lab3/build install --record /home/student/anro_ws/src/build/lab3/install.log --single-version-externally-managed
+[1.697s] running egg_info
+[1.699s] writing ../build/lab3/lab3.egg-info/PKG-INFO
+[1.699s] writing dependency_links to ../build/lab3/lab3.egg-info/dependency_links.txt
+[1.700s] writing entry points to ../build/lab3/lab3.egg-info/entry_points.txt
+[1.700s] writing requirements to ../build/lab3/lab3.egg-info/requires.txt
+[1.700s] writing top-level names to ../build/lab3/lab3.egg-info/top_level.txt
+[1.702s] reading manifest file '../build/lab3/lab3.egg-info/SOURCES.txt'
+[1.702s] adding license file 'LICENSE'
+[1.703s] writing manifest file '../build/lab3/lab3.egg-info/SOURCES.txt'
+[1.703s] running build
+[1.703s] running build_py
+[1.704s] running install
+[1.704s] running install_lib
+[1.705s] running install_data
+[1.705s] running install_egg_info
+[1.710s] removing '/home/student/anro_ws/src/install/lab3/lib/python3.10/site-packages/lab3-0.0.0-py3.10.egg-info' (and everything under it)
+[1.710s] Copying ../build/lab3/lab3.egg-info to /home/student/anro_ws/src/install/lab3/lib/python3.10/site-packages/lab3-0.0.0-py3.10.egg-info
+[1.710s] running install_scripts
+[1.734s] Installing lab3 script to /home/student/anro_ws/src/install/lab3/lib/lab3
+[1.735s] writing list of installed files to '/home/student/anro_ws/src/build/lab3/install.log'
+[2.874s] Invoked command in '/home/student/anro_ws/src/lab3' returned '0': PYTHONPATH=/home/student/anro_ws/src/build/lab3/prefix_override:/home/student/anro_ws/src/install/lab3/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lab3 build --build-base /home/student/anro_ws/src/build/lab3/build install --record /home/student/anro_ws/src/build/lab3/install.log --single-version-externally-managed

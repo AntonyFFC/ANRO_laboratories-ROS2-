@@ -1,0 +1,3 @@
+[console_scripts]
+reverse_kinematics = lab4PD.reverse_kinematics:main
+

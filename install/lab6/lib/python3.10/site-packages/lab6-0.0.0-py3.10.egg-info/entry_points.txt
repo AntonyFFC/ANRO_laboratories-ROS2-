@@ -1,0 +1,3 @@
+[console_scripts]
+marker_broker = lab6.marker_broker:main
+

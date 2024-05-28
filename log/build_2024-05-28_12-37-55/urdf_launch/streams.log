@@ -1,0 +1,32 @@
+[0.390s] Invoking command in '/home/student/anro_ws/src/build/urdf_launch': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/dobot_anro_system/install/dobot_state_updater:/opt/dobot_anro_system/install/dobot_motion:/opt/dobot_anro_system/install/dobot_homing:/opt/dobot_anro_system/install/dobot_end_effector:/opt/dobot_anro_system/install/dobot_diagnostics:/opt/dobot_anro_system/install/dobot_control_panel:/opt/dobot_anro_system/install/dobot_bringup:/opt/ros/humble /usr/bin/cmake /home/student/anro_ws/src/urdf_launch/urdf_launch -DCMAKE_INSTALL_PREFIX=/home/student/anro_ws/src/install/urdf_launch
+[1.106s] -- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.107s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[1.107s] -- Configuring done
+[1.107s] -- Generating done
+[1.108s] -- Build files have been written to: /home/student/anro_ws/src/build/urdf_launch
+[1.462s] Invoked command in '/home/student/anro_ws/src/build/urdf_launch' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/dobot_anro_system/install/dobot_state_updater:/opt/dobot_anro_system/install/dobot_motion:/opt/dobot_anro_system/install/dobot_homing:/opt/dobot_anro_system/install/dobot_end_effector:/opt/dobot_anro_system/install/dobot_diagnostics:/opt/dobot_anro_system/install/dobot_control_panel:/opt/dobot_anro_system/install/dobot_bringup:/opt/ros/humble /usr/bin/cmake /home/student/anro_ws/src/urdf_launch/urdf_launch -DCMAKE_INSTALL_PREFIX=/home/student/anro_ws/src/install/urdf_launch
+[1.464s] Invoking command in '/home/student/anro_ws/src/build/urdf_launch': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/dobot_anro_system/install/dobot_state_updater:/opt/dobot_anro_system/install/dobot_motion:/opt/dobot_anro_system/install/dobot_homing:/opt/dobot_anro_system/install/dobot_end_effector:/opt/dobot_anro_system/install/dobot_diagnostics:/opt/dobot_anro_system/install/dobot_control_panel:/opt/dobot_anro_system/install/dobot_bringup:/opt/ros/humble /usr/bin/cmake --build /home/student/anro_ws/src/build/urdf_launch -- -j4 -l4
+[1.504s] Invoked command in '/home/student/anro_ws/src/build/urdf_launch' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/dobot_anro_system/install/dobot_state_updater:/opt/dobot_anro_system/install/dobot_motion:/opt/dobot_anro_system/install/dobot_homing:/opt/dobot_anro_system/install/dobot_end_effector:/opt/dobot_anro_system/install/dobot_diagnostics:/opt/dobot_anro_system/install/dobot_control_panel:/opt/dobot_anro_system/install/dobot_bringup:/opt/ros/humble /usr/bin/cmake --build /home/student/anro_ws/src/build/urdf_launch -- -j4 -l4
+[1.542s] Invoking command in '/home/student/anro_ws/src/build/urdf_launch': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/dobot_anro_system/install/dobot_state_updater:/opt/dobot_anro_system/install/dobot_motion:/opt/dobot_anro_system/install/dobot_homing:/opt/dobot_anro_system/install/dobot_end_effector:/opt/dobot_anro_system/install/dobot_diagnostics:/opt/dobot_anro_system/install/dobot_control_panel:/opt/dobot_anro_system/install/dobot_bringup:/opt/ros/humble /usr/bin/cmake --install /home/student/anro_ws/src/build/urdf_launch
+[1.556s] -- Install configuration: ""
+[1.556s] -- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/config
+[1.556s] -- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/config/urdf.rviz
+[1.556s] -- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/launch
+[1.556s] -- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/launch/display.launch.py
+[1.556s] -- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/launch/description.launch.py
+[1.556s] -- Installing: /home/student/anro_ws/src/install/urdf_launch/share/ament_index/resource_index/package_run_dependencies/urdf_launch
+[1.556s] -- Installing: /home/student/anro_ws/src/install/urdf_launch/share/ament_index/resource_index/parent_prefix_path/urdf_launch
+[1.556s] -- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/environment/ament_prefix_path.sh
+[1.556s] -- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/environment/ament_prefix_path.dsv
+[1.556s] -- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/environment/path.sh
+[1.556s] -- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/environment/path.dsv
+[1.556s] -- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/local_setup.bash
+[1.556s] -- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/local_setup.sh
+[1.557s] -- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/local_setup.zsh
+[1.557s] -- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/local_setup.dsv
+[1.557s] -- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/package.dsv
+[1.557s] -- Installing: /home/student/anro_ws/src/install/urdf_launch/share/ament_index/resource_index/packages/urdf_launch
+[1.557s] -- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/cmake/urdf_launchConfig.cmake
+[1.557s] -- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/cmake/urdf_launchConfig-version.cmake
+[1.557s] -- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/package.xml
+[1.568s] Invoked command in '/home/student/anro_ws/src/build/urdf_launch' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/dobot_anro_system/install/dobot_state_updater:/opt/dobot_anro_system/install/dobot_motion:/opt/dobot_anro_system/install/dobot_homing:/opt/dobot_anro_system/install/dobot_end_effector:/opt/dobot_anro_system/install/dobot_diagnostics:/opt/dobot_anro_system/install/dobot_control_panel:/opt/dobot_anro_system/install/dobot_bringup:/opt/ros/humble /usr/bin/cmake --install /home/student/anro_ws/src/build/urdf_launch

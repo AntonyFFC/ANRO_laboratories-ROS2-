@@ -1,0 +1,17 @@
+LICENSE
+package.xml
+setup.cfg
+setup.py
+../build/lab4PD/lab4PD.egg-info/PKG-INFO
+../build/lab4PD/lab4PD.egg-info/SOURCES.txt
+../build/lab4PD/lab4PD.egg-info/dependency_links.txt
+../build/lab4PD/lab4PD.egg-info/entry_points.txt
+../build/lab4PD/lab4PD.egg-info/requires.txt
+../build/lab4PD/lab4PD.egg-info/top_level.txt
+../build/lab4PD/lab4PD.egg-info/zip-safe
+lab4PD/__init__.py
+lab4PD/reverse_kinematics.py
+resource/lab4PD
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

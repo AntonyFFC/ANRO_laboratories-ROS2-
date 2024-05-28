@@ -1,0 +1,3 @@
+[console_scripts]
+wieza = lab2.chwytak:main
+

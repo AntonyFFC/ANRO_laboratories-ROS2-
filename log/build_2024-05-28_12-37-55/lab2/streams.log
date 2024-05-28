@@ -1,0 +1,40 @@
+[2.023s] Invoking command in '/home/student/anro_ws/src/lab2': PYTHONPATH=/home/student/anro_ws/src/build/lab2/prefix_override:/home/student/anro_ws/src/install/lab2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lab2 build --build-base /home/student/anro_ws/src/build/lab2/build install --record /home/student/anro_ws/src/build/lab2/install.log --single-version-externally-managed
+[2.298s] running egg_info
+[2.299s] creating ../build/lab2/lab2.egg-info
+[2.299s] writing ../build/lab2/lab2.egg-info/PKG-INFO
+[2.300s] writing dependency_links to ../build/lab2/lab2.egg-info/dependency_links.txt
+[2.301s] writing entry points to ../build/lab2/lab2.egg-info/entry_points.txt
+[2.301s] writing requirements to ../build/lab2/lab2.egg-info/requires.txt
+[2.302s] writing top-level names to ../build/lab2/lab2.egg-info/top_level.txt
+[2.302s] writing manifest file '../build/lab2/lab2.egg-info/SOURCES.txt'
+[2.304s] reading manifest file '../build/lab2/lab2.egg-info/SOURCES.txt'
+[2.305s] writing manifest file '../build/lab2/lab2.egg-info/SOURCES.txt'
+[2.306s] running build
+[2.306s] running build_py
+[2.306s] creating /home/student/anro_ws/src/build/lab2/build
+[2.307s] creating /home/student/anro_ws/src/build/lab2/build/lib
+[2.307s] creating /home/student/anro_ws/src/build/lab2/build/lib/lab2
+[2.307s] copying lab2/chwytak_test.py -> /home/student/anro_ws/src/build/lab2/build/lib/lab2
+[2.308s] copying lab2/__init__.py -> /home/student/anro_ws/src/build/lab2/build/lib/lab2
+[2.308s] copying lab2/chwytak.py -> /home/student/anro_ws/src/build/lab2/build/lib/lab2
+[2.309s] running install
+[2.310s] running install_lib
+[2.311s] creating /home/student/anro_ws/src/install/lab2/lib/python3.10/site-packages/lab2
+[2.311s] copying /home/student/anro_ws/src/build/lab2/build/lib/lab2/chwytak_test.py -> /home/student/anro_ws/src/install/lab2/lib/python3.10/site-packages/lab2
+[2.312s] copying /home/student/anro_ws/src/build/lab2/build/lib/lab2/__init__.py -> /home/student/anro_ws/src/install/lab2/lib/python3.10/site-packages/lab2
+[2.312s] copying /home/student/anro_ws/src/build/lab2/build/lib/lab2/chwytak.py -> /home/student/anro_ws/src/install/lab2/lib/python3.10/site-packages/lab2
+[2.313s] byte-compiling /home/student/anro_ws/src/install/lab2/lib/python3.10/site-packages/lab2/chwytak_test.py to chwytak_test.cpython-310.pyc
+[2.314s] byte-compiling /home/student/anro_ws/src/install/lab2/lib/python3.10/site-packages/lab2/__init__.py to __init__.cpython-310.pyc
+[2.314s] byte-compiling /home/student/anro_ws/src/install/lab2/lib/python3.10/site-packages/lab2/chwytak.py to chwytak.cpython-310.pyc
+[2.316s] running install_data
+[2.330s] creating /home/student/anro_ws/src/install/lab2/share/ament_index
+[2.330s] creating /home/student/anro_ws/src/install/lab2/share/ament_index/resource_index
+[2.330s] creating /home/student/anro_ws/src/install/lab2/share/ament_index/resource_index/packages
+[2.330s] copying resource/lab2 -> /home/student/anro_ws/src/install/lab2/share/ament_index/resource_index/packages
+[2.330s] copying package.xml -> /home/student/anro_ws/src/install/lab2/share/lab2
+[2.330s] running install_egg_info
+[2.332s] Copying ../build/lab2/lab2.egg-info to /home/student/anro_ws/src/install/lab2/lib/python3.10/site-packages/lab2-0.0.0-py3.10.egg-info
+[2.333s] running install_scripts
+[2.367s] Installing wieza script to /home/student/anro_ws/src/install/lab2/lib/lab2
+[2.368s] writing list of installed files to '/home/student/anro_ws/src/build/lab2/install.log'
+[2.609s] Invoked command in '/home/student/anro_ws/src/lab2' returned '0': PYTHONPATH=/home/student/anro_ws/src/build/lab2/prefix_override:/home/student/anro_ws/src/install/lab2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lab2 build --build-base /home/student/anro_ws/src/build/lab2/build install --record /home/student/anro_ws/src/build/lab2/install.log --single-version-externally-managed

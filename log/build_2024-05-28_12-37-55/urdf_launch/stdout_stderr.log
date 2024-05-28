@@ -1,0 +1,26 @@
+-- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/student/anro_ws/src/build/urdf_launch
+-- Install configuration: ""
+-- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/config
+-- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/config/urdf.rviz
+-- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/launch
+-- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/launch/display.launch.py
+-- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/launch/description.launch.py
+-- Installing: /home/student/anro_ws/src/install/urdf_launch/share/ament_index/resource_index/package_run_dependencies/urdf_launch
+-- Installing: /home/student/anro_ws/src/install/urdf_launch/share/ament_index/resource_index/parent_prefix_path/urdf_launch
+-- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/environment/ament_prefix_path.sh
+-- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/environment/ament_prefix_path.dsv
+-- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/environment/path.sh
+-- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/environment/path.dsv
+-- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/local_setup.bash
+-- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/local_setup.sh
+-- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/local_setup.zsh
+-- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/local_setup.dsv
+-- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/package.dsv
+-- Installing: /home/student/anro_ws/src/install/urdf_launch/share/ament_index/resource_index/packages/urdf_launch
+-- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/cmake/urdf_launchConfig.cmake
+-- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/cmake/urdf_launchConfig-version.cmake
+-- Installing: /home/student/anro_ws/src/install/urdf_launch/share/urdf_launch/package.xml

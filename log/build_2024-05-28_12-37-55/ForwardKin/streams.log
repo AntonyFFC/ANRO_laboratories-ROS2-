@@ -1,0 +1,39 @@
+[2.122s] Invoking command in '/home/student/anro_ws/src/ForwardKin': PYTHONPATH=/home/student/anro_ws/src/build/ForwardKin/prefix_override:/home/student/anro_ws/src/install/ForwardKin/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/ForwardKin build --build-base /home/student/anro_ws/src/build/ForwardKin/build install --record /home/student/anro_ws/src/build/ForwardKin/install.log --single-version-externally-managed
+[2.418s] running egg_info
+[2.418s] creating ../build/ForwardKin/ForwardKin.egg-info
+[2.419s] writing ../build/ForwardKin/ForwardKin.egg-info/PKG-INFO
+[2.419s] writing dependency_links to ../build/ForwardKin/ForwardKin.egg-info/dependency_links.txt
+[2.419s] writing entry points to ../build/ForwardKin/ForwardKin.egg-info/entry_points.txt
+[2.419s] writing requirements to ../build/ForwardKin/ForwardKin.egg-info/requires.txt
+[2.419s] writing top-level names to ../build/ForwardKin/ForwardKin.egg-info/top_level.txt
+[2.419s] writing manifest file '../build/ForwardKin/ForwardKin.egg-info/SOURCES.txt'
+[2.421s] reading manifest file '../build/ForwardKin/ForwardKin.egg-info/SOURCES.txt'
+[2.421s] adding license file 'LICENSE'
+[2.421s] writing manifest file '../build/ForwardKin/ForwardKin.egg-info/SOURCES.txt'
+[2.422s] running build
+[2.422s] running build_py
+[2.422s] creating /home/student/anro_ws/src/build/ForwardKin/build
+[2.422s] creating /home/student/anro_ws/src/build/ForwardKin/build/lib
+[2.422s] creating /home/student/anro_ws/src/build/ForwardKin/build/lib/ForwardKin
+[2.422s] copying ForwardKin/__init__.py -> /home/student/anro_ws/src/build/ForwardKin/build/lib/ForwardKin
+[2.422s] copying ForwardKin/ForwardKin.py -> /home/student/anro_ws/src/build/ForwardKin/build/lib/ForwardKin
+[2.423s] running install
+[2.423s] running install_lib
+[2.423s] creating /home/student/anro_ws/src/install/ForwardKin/lib/python3.10/site-packages/ForwardKin
+[2.423s] copying /home/student/anro_ws/src/build/ForwardKin/build/lib/ForwardKin/__init__.py -> /home/student/anro_ws/src/install/ForwardKin/lib/python3.10/site-packages/ForwardKin
+[2.423s] copying /home/student/anro_ws/src/build/ForwardKin/build/lib/ForwardKin/ForwardKin.py -> /home/student/anro_ws/src/install/ForwardKin/lib/python3.10/site-packages/ForwardKin
+[2.424s] byte-compiling /home/student/anro_ws/src/install/ForwardKin/lib/python3.10/site-packages/ForwardKin/__init__.py to __init__.cpython-310.pyc
+[2.424s] byte-compiling /home/student/anro_ws/src/install/ForwardKin/lib/python3.10/site-packages/ForwardKin/ForwardKin.py to ForwardKin.cpython-310.pyc
+[2.425s] running install_data
+[2.425s] creating /home/student/anro_ws/src/install/ForwardKin/share/ament_index
+[2.426s] creating /home/student/anro_ws/src/install/ForwardKin/share/ament_index/resource_index
+[2.426s] creating /home/student/anro_ws/src/install/ForwardKin/share/ament_index/resource_index/packages
+[2.426s] copying resource/ForwardKin -> /home/student/anro_ws/src/install/ForwardKin/share/ament_index/resource_index/packages
+[2.426s] copying package.xml -> /home/student/anro_ws/src/install/ForwardKin/share/ForwardKin
+[2.426s] creating /home/student/anro_ws/src/install/ForwardKin/share/ForwardKin/launch
+[2.426s] running install_egg_info
+[2.428s] Copying ../build/ForwardKin/ForwardKin.egg-info to /home/student/anro_ws/src/install/ForwardKin/lib/python3.10/site-packages/ForwardKin-0.0.0-py3.10.egg-info
+[2.428s] running install_scripts
+[2.452s] Installing ForwardKin script to /home/student/anro_ws/src/install/ForwardKin/lib/ForwardKin
+[2.452s] writing list of installed files to '/home/student/anro_ws/src/build/ForwardKin/install.log'
+[2.657s] Invoked command in '/home/student/anro_ws/src/ForwardKin' returned '0': PYTHONPATH=/home/student/anro_ws/src/build/ForwardKin/prefix_override:/home/student/anro_ws/src/install/ForwardKin/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/ForwardKin build --build-base /home/student/anro_ws/src/build/ForwardKin/build install --record /home/student/anro_ws/src/build/ForwardKin/install.log --single-version-externally-managed

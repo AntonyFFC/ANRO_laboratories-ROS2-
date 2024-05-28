@@ -1,0 +1,39 @@
+[1.333s] Invoking command in '/home/student/anro_ws/src/lab3': PYTHONPATH=/home/student/anro_ws/src/build/lab3/prefix_override:/home/student/anro_ws/src/install/lab3/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lab3 build --build-base /home/student/anro_ws/src/build/lab3/build install --record /home/student/anro_ws/src/build/lab3/install.log --single-version-externally-managed
+[1.588s] running egg_info
+[1.589s] creating ../build/lab3/lab3.egg-info
+[1.589s] writing ../build/lab3/lab3.egg-info/PKG-INFO
+[1.589s] writing dependency_links to ../build/lab3/lab3.egg-info/dependency_links.txt
+[1.590s] writing entry points to ../build/lab3/lab3.egg-info/entry_points.txt
+[1.590s] writing requirements to ../build/lab3/lab3.egg-info/requires.txt
+[1.590s] writing top-level names to ../build/lab3/lab3.egg-info/top_level.txt
+[1.590s] writing manifest file '../build/lab3/lab3.egg-info/SOURCES.txt'
+[1.592s] reading manifest file '../build/lab3/lab3.egg-info/SOURCES.txt'
+[1.592s] adding license file 'LICENSE'
+[1.593s] writing manifest file '../build/lab3/lab3.egg-info/SOURCES.txt'
+[1.593s] running build
+[1.593s] running build_py
+[1.593s] creating /home/student/anro_ws/src/build/lab3/build
+[1.593s] creating /home/student/anro_ws/src/build/lab3/build/lib
+[1.593s] creating /home/student/anro_ws/src/build/lab3/build/lib/lab3
+[1.593s] copying lab3/__init__.py -> /home/student/anro_ws/src/build/lab3/build/lib/lab3
+[1.593s] copying lab3/komunikator.py -> /home/student/anro_ws/src/build/lab3/build/lib/lab3
+[1.593s] running install
+[1.593s] running install_lib
+[1.594s] creating /home/student/anro_ws/src/install/lab3/lib/python3.10/site-packages/lab3
+[1.594s] copying /home/student/anro_ws/src/build/lab3/build/lib/lab3/__init__.py -> /home/student/anro_ws/src/install/lab3/lib/python3.10/site-packages/lab3
+[1.594s] copying /home/student/anro_ws/src/build/lab3/build/lib/lab3/komunikator.py -> /home/student/anro_ws/src/install/lab3/lib/python3.10/site-packages/lab3
+[1.595s] byte-compiling /home/student/anro_ws/src/install/lab3/lib/python3.10/site-packages/lab3/__init__.py to __init__.cpython-310.pyc
+[1.595s] byte-compiling /home/student/anro_ws/src/install/lab3/lib/python3.10/site-packages/lab3/komunikator.py to komunikator.cpython-310.pyc
+[1.596s] running install_data
+[1.596s] creating /home/student/anro_ws/src/install/lab3/share/ament_index
+[1.596s] creating /home/student/anro_ws/src/install/lab3/share/ament_index/resource_index
+[1.596s] creating /home/student/anro_ws/src/install/lab3/share/ament_index/resource_index/packages
+[1.597s] copying resource/lab3 -> /home/student/anro_ws/src/install/lab3/share/ament_index/resource_index/packages
+[1.597s] copying package.xml -> /home/student/anro_ws/src/install/lab3/share/lab3
+[1.597s] creating /home/student/anro_ws/src/install/lab3/share/lab3/launch
+[1.597s] running install_egg_info
+[1.598s] Copying ../build/lab3/lab3.egg-info to /home/student/anro_ws/src/install/lab3/lib/python3.10/site-packages/lab3-0.0.0-py3.10.egg-info
+[1.599s] running install_scripts
+[1.620s] Installing lab3 script to /home/student/anro_ws/src/install/lab3/lib/lab3
+[1.620s] writing list of installed files to '/home/student/anro_ws/src/build/lab3/install.log'
+[2.410s] Invoked command in '/home/student/anro_ws/src/lab3' returned '0': PYTHONPATH=/home/student/anro_ws/src/build/lab3/prefix_override:/home/student/anro_ws/src/install/lab3/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lab3 build --build-base /home/student/anro_ws/src/build/lab3/build install --record /home/student/anro_ws/src/build/lab3/install.log --single-version-externally-managed

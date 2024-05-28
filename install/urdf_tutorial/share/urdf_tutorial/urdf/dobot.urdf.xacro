@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<robot name="macroedsad" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:property name="params" value="${xacro.load_yaml('$(find urdf_tutorial)/parameters/size_values.yaml')}"/>
+  
+  <xacro:property name="l0_height" value="${params['links_sizes']['link0']}" />
+  <xacro:property name="l1_height" value="${params['links_sizes']['link1']}" />
+  <xacro:property name="l2_length" value="${params['links_sizes']['link2']}" />
+  <xacro:property name="l3_length" value="${params['links_sizes']['link3']}"/>
+  <xacro:property name="l4_length" value="${params['links_sizes']['link4']}"/>
+  <xacro:property name="camera_distance" value="${params['links_sizes']['camera_link']}"/>
+
+  <xacro:property name="j0_min" value="${params['joints_limits']['joint0']['min']}" />
+  <xacro:property name="j0_max" value="${params['joints_limits']['joint0']['max']}" />
+  <xacro:property name="j1_min" value="${params['joints_limits']['joint1']['min']}" />
+  <xacro:property name="j1_max" value="${params['joints_limits']['joint1']['max']}" />
+  <xacro:property name="j2_min" value="${params['joints_limits']['joint2']['min']}" />
+  <xacro:property name="j2_max" value="${params['joints_limits']['joint2']['max']}" />
+  <xacro:property name="j3_min" value="${params['joints_limits']['joint3']['min']}" />
+  <xacro:property name="j3_max" value="${params['joints_limits']['joint3']['max']}" />
+  <xacro:property name="j4_min" value="${params['joints_limits']['joint4']['min']}" />
+  <xacro:property name="j4_max" value="${params['joints_limits']['joint4']['max']}" />
+
+<material name="grey">
+    <color rgba="0.7 0.7 0.7 1"/>
+</material>
+
+<material name="orange">
+    <color rgba="1 0.55 0 1"/>
+</material>
+
+<material name="white">
+    <color rgba="1 1 1 1"/>
+</material>
+
+<material name="blue">
+    <color rgba="0.03 0 0.8 1"/>
+</material>
+
+<material name="red">
+    <color rgba="1 0 0 1"/>
+</material>
+
+  <xacro:property name="width" value="0.18" />
+  <link name="base">
+      <visual>
+        <geometry>
+          <box size="${width} ${width} ${l0_height}"/>
+        </geometry>
+        <material name = "grey"/> 
+        <origin rpy="0 0 0" xyz="0 0 ${l0_height / 2}"/>  
+      </visual>
+  </link>
+  
+  <link name="front_label">
+      <visual>
+        <geometry>
+          <box size="${l0_height - 0.02} ${width-0.01} 0.003"/>
+        </geometry>
+        <material name = "white"/>
+        <origin rpy="0 0 0" xyz="${width/2 - (l0_height - 0.01)/2} 0 ${l0_height}"/> 
+      </visual>
+  </link>
+
+  <joint name="label_joint" type="fixed">
+    <parent link="base"/>
+    <child link="front_label"/>
+    <origin xyz="0 0 0"/>
+  </joint>\
+
+  <link name="power_button">
+      <visual>
+        <geometry>
+          <cylinder length="0.003" radius="0.01"/>
+        </geometry>
+        <material name = "red"/>
+        <origin rpy="0 0 0" xyz="${-width/2 + (l0_height - 0.01)/2} ${width/2-0.02} ${l0_height}"/> 
+      </visual>
+  </link>
+
+  <joint name="power_joint" type="fixed">
+    <parent link="base"/>
+    <child link="power_button"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+  <link name="rotating_base">
+      <visual>
+        <geometry>
+          <box size="${width/2} ${width/2} ${l1_height}"/>
+        </geometry>
+        <material name = "blue"/>
+        <origin rpy="0 0 0" xyz="0 0 ${l1_height / 2}"/> 
+      </visual>
+  </link>
+
+  <joint name="rotating_base_joint" type="revolute">
+    <axis xyz="0 0 1"/>
+    <limit effort="1000.0" lower="${j0_min}" upper="${j0_max}" velocity="0.5"/>
+    <parent link="base"/>
+    <child link="rotating_base"/>
+    <origin xyz="0 0 ${l0_height}"/>
+  </joint>
+
+  <link name="lower_arm">
+      <visual>
+        <geometry>
+          <cylinder length="${l2_length + 0.02}" radius="0.02"/>
+        </geometry>
+        <origin xyz="0 0 ${l2_length/2}" rpy="0 0 0"/>
+        <material name="orange"/>
+      </visual>
+  </link>
+
+  <link name="camera_link">
+      <visual>
+        <geometry>
+          <box size="${camera_distance/4} 0.012 0.012"/>
+        </geometry>
+        <material name = "blue"/>
+        <origin rpy="0 0 0" xyz="${camera_distance/8} 0 0"/> 
+      </visual>
+  </link>
+
+  <link name="camera">
+      <visual>
+        <geometry>
+          <box size="0.025 0.09 0.025"/>
+        </geometry>
+        <material name = "red"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/> 
+      </visual>
+  </link>
+
+  <joint name="camera_joint" type="fixed">
+    <axis xyz="0 1 0"/>
+    <parent link="effector"/>
+    <child link="camera_link"/>
+    <origin xyz="${l4_length - 0.02} 0 0"/>
+  </joint>
+
+  <joint name="camera_joint2" type="fixed">
+    <axis xyz="0 1 0"/>
+    <parent link="camera_link"/>
+    <child link="camera"/>
+    <origin rpy="3.1415 0 0" xyz="${camera_distance/4} 0 0"/> 
+  </joint>
+
+  <link name="upper_arm">
+      <visual>
+        <geometry>
+          <cylinder length="${l3_length + 0.02}" radius="0.02"/>
+        </geometry>
+        <origin xyz="${l3_length/2} 0 0" rpy="0 1.5708 0"/>
+        <material name="orange"/>
+      </visual>
+  </link>
+
+  <link name="arm_joint_sphere">
+    <visual>
+        <geometry>
+            <sphere radius="0.03"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <material name="blue"/>
+    </visual>
+  </link>
+
+  <joint name="arm_rotbase_joint" type="revolute">
+    <axis xyz="0 1 0"/>
+    <limit effort="1000.0" lower="${j1_min}" upper="${j1_max}" velocity="0.5"/>
+    <parent link="rotating_base"/>
+    <child link="lower_arm"/>
+    <origin xyz="0 0 ${l1_height}"/>
+  </joint>
+
+  <joint name="arm_arm_joint" type="revolute">
+    <axis xyz="0 1 0"/>
+    <limit effort="1000.0" lower="${j2_min}" upper="${j2_max}" velocity="0.5"/>
+    <parent link="lower_arm"/>
+    <child link="upper_arm"/>
+    <origin xyz="0 0 ${l2_length}"/>
+  </joint>
+
+  <joint name="sphere_joint" type="fixed">
+    <parent link="lower_arm"/>
+    <child link="arm_joint_sphere"/>
+    <origin xyz="0 0 ${l2_length}"/>
+  </joint>
+
+  <link name="effector">
+      <visual>
+        <geometry>
+          <box size="${l4_length} 0.02 0.06"/>
+        </geometry>
+        <material name = "blue"/>
+        <origin rpy="0 0 0" xyz="${l4_length / 2 - 0.02} 0 0"/> 
+      </visual>
+  </link>
+
+  <joint name="effector_lean_joint" type="revolute">
+    <axis xyz="0 1 0"/>
+    <limit effort="1000.0" lower="${j3_min}" upper="${j3_max}" velocity="0.5"/>
+    <parent link="upper_arm"/>
+    <child link="effector"/>
+    <origin xyz="${l3_length} 0 0"/>
+  </joint>
+
+  <link name="effector_rot_base">
+      <visual>
+        <geometry>
+          <cylinder length="0.01" radius="0.02"/>
+        </geometry>
+        <material name = "orange"/>
+        <origin rpy="0 0 0" xyz="0 0 -0.003"/> 
+      </visual>
+  </link>
+
+  <joint name="effector_rot_joint" type="revolute">
+    <axis xyz="0 0 1"/>
+    <limit effort="1000.0" lower="${j4_min}" upper="${j4_max}" velocity="0.5"/>
+    <parent link="effector"/>
+    <child link="effector_rot_base"/>
+    <origin xyz="0.03 0 -0.03"/>
+  </joint>
+
+  <link name="gripper">
+      <visual>
+        <geometry>
+          <box size="0.015 0.028 0.04"/>
+        </geometry>
+        <material name = "blue"/>
+        <origin rpy="0 0 0" xyz="0 0 -0.005"/> 
+      </visual>
+  </link>
+
+  <joint name="gripper_joint" type="fixed">
+    <parent link="effector_rot_base"/>
+    <child link="gripper"/>
+    <origin xyz="0 0 -0.02"/>
+  </joint>
+
+  <link name="actuator">
+      <visual>
+        <geometry>
+          <box size="0.015 0.025 0.02"/>
+        </geometry>
+        <material name = "red"/>
+        <origin rpy="0 0 0" xyz="0 0.0125 0"/> 
+      </visual>
+  </link>
+
+  <joint name="actuator_joint" type="fixed">
+    <parent link="gripper"/>
+    <child link="actuator"/>
+    <origin xyz="0 0.016 0"/>
+  </joint>
+
+</robot>

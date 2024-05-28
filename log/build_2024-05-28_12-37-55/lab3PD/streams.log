@@ -1,0 +1,38 @@
+[2.068s] Invoking command in '/home/student/anro_ws/src/lab3PD': PYTHONPATH=/home/student/anro_ws/src/build/lab3PD/prefix_override:/home/student/anro_ws/src/install/lab3PD/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lab3PD build --build-base /home/student/anro_ws/src/build/lab3PD/build install --record /home/student/anro_ws/src/build/lab3PD/install.log --single-version-externally-managed
+[2.351s] running egg_info
+[2.357s] creating ../build/lab3PD/lab3PD.egg-info
+[2.358s] writing ../build/lab3PD/lab3PD.egg-info/PKG-INFO
+[2.358s] writing dependency_links to ../build/lab3PD/lab3PD.egg-info/dependency_links.txt
+[2.358s] writing entry points to ../build/lab3PD/lab3PD.egg-info/entry_points.txt
+[2.359s] writing requirements to ../build/lab3PD/lab3PD.egg-info/requires.txt
+[2.359s] writing top-level names to ../build/lab3PD/lab3PD.egg-info/top_level.txt
+[2.359s] writing manifest file '../build/lab3PD/lab3PD.egg-info/SOURCES.txt'
+[2.361s] reading manifest file '../build/lab3PD/lab3PD.egg-info/SOURCES.txt'
+[2.361s] adding license file 'LICENSE'
+[2.362s] writing manifest file '../build/lab3PD/lab3PD.egg-info/SOURCES.txt'
+[2.362s] running build
+[2.362s] running build_py
+[2.363s] creating /home/student/anro_ws/src/build/lab3PD/build
+[2.363s] creating /home/student/anro_ws/src/build/lab3PD/build/lib
+[2.363s] creating /home/student/anro_ws/src/build/lab3PD/build/lib/lab3PD
+[2.363s] copying lab3PD/__init__.py -> /home/student/anro_ws/src/build/lab3PD/build/lib/lab3PD
+[2.364s] running install
+[2.364s] running install_lib
+[2.365s] creating /home/student/anro_ws/src/install/lab3PD/lib/python3.10/site-packages/lab3PD
+[2.365s] copying /home/student/anro_ws/src/build/lab3PD/build/lib/lab3PD/__init__.py -> /home/student/anro_ws/src/install/lab3PD/lib/python3.10/site-packages/lab3PD
+[2.366s] byte-compiling /home/student/anro_ws/src/install/lab3PD/lib/python3.10/site-packages/lab3PD/__init__.py to __init__.cpython-310.pyc
+[2.366s] running install_data
+[2.367s] creating /home/student/anro_ws/src/install/lab3PD/share/ament_index
+[2.367s] creating /home/student/anro_ws/src/install/lab3PD/share/ament_index/resource_index
+[2.367s] creating /home/student/anro_ws/src/install/lab3PD/share/ament_index/resource_index/packages
+[2.367s] copying resource/lab3PD -> /home/student/anro_ws/src/install/lab3PD/share/ament_index/resource_index/packages
+[2.367s] copying package.xml -> /home/student/anro_ws/src/install/lab3PD/share/lab3PD
+[2.368s] copying launch/dobot_launch.py -> /home/student/anro_ws/src/install/lab3PD/share/lab3PD
+[2.368s] copying urdf/values.yaml -> /home/student/anro_ws/src/install/lab3PD/share/lab3PD
+[2.368s] copying urdf/dobot.urdf.xacro -> /home/student/anro_ws/src/install/lab3PD/share/lab3PD
+[2.368s] copying lab3PD/dobot_test.rviz -> /home/student/anro_ws/src/install/lab3PD/share/lab3PD
+[2.369s] running install_egg_info
+[2.371s] Copying ../build/lab3PD/lab3PD.egg-info to /home/student/anro_ws/src/install/lab3PD/lib/python3.10/site-packages/lab3PD-0.0.0-py3.10.egg-info
+[2.372s] running install_scripts
+[2.401s] writing list of installed files to '/home/student/anro_ws/src/build/lab3PD/install.log'
+[2.593s] Invoked command in '/home/student/anro_ws/src/lab3PD' returned '0': PYTHONPATH=/home/student/anro_ws/src/build/lab3PD/prefix_override:/home/student/anro_ws/src/install/lab3PD/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lab3PD build --build-base /home/student/anro_ws/src/build/lab3PD/build install --record /home/student/anro_ws/src/build/lab3PD/install.log --single-version-externally-managed

@@ -1,0 +1,5 @@
+[console_scripts]
+marker_publisher = lab6PD.marker_publisher:main
+marker_sender = lab6PD.marker_sender:main
+robot_pilot = lab6PD.robot_pilot:main
+

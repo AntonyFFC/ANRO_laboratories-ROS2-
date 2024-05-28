@@ -1,0 +1,17 @@
+LICENSE
+package.xml
+setup.cfg
+setup.py
+../build/ForwardKin/ForwardKin.egg-info/PKG-INFO
+../build/ForwardKin/ForwardKin.egg-info/SOURCES.txt
+../build/ForwardKin/ForwardKin.egg-info/dependency_links.txt
+../build/ForwardKin/ForwardKin.egg-info/entry_points.txt
+../build/ForwardKin/ForwardKin.egg-info/requires.txt
+../build/ForwardKin/ForwardKin.egg-info/top_level.txt
+../build/ForwardKin/ForwardKin.egg-info/zip-safe
+ForwardKin/ForwardKin.py
+ForwardKin/__init__.py
+resource/ForwardKin
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

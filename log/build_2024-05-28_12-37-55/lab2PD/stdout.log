@@ -1,0 +1,36 @@
+running egg_info
+creating ../build/lab2PD/lab2PD.egg-info
+writing ../build/lab2PD/lab2PD.egg-info/PKG-INFO
+writing dependency_links to ../build/lab2PD/lab2PD.egg-info/dependency_links.txt
+writing entry points to ../build/lab2PD/lab2PD.egg-info/entry_points.txt
+writing requirements to ../build/lab2PD/lab2PD.egg-info/requires.txt
+writing top-level names to ../build/lab2PD/lab2PD.egg-info/top_level.txt
+writing manifest file '../build/lab2PD/lab2PD.egg-info/SOURCES.txt'
+reading manifest file '../build/lab2PD/lab2PD.egg-info/SOURCES.txt'
+writing manifest file '../build/lab2PD/lab2PD.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/student/anro_ws/src/build/lab2PD/build
+creating /home/student/anro_ws/src/build/lab2PD/build/lib
+creating /home/student/anro_ws/src/build/lab2PD/build/lib/lab2PD
+copying lab2PD/turtle_action.py -> /home/student/anro_ws/src/build/lab2PD/build/lib/lab2PD
+copying lab2PD/__init__.py -> /home/student/anro_ws/src/build/lab2PD/build/lib/lab2PD
+running install
+running install_lib
+creating /home/student/anro_ws/src/install/lab2PD/lib/python3.10/site-packages/lab2PD
+copying /home/student/anro_ws/src/build/lab2PD/build/lib/lab2PD/turtle_action.py -> /home/student/anro_ws/src/install/lab2PD/lib/python3.10/site-packages/lab2PD
+copying /home/student/anro_ws/src/build/lab2PD/build/lib/lab2PD/__init__.py -> /home/student/anro_ws/src/install/lab2PD/lib/python3.10/site-packages/lab2PD
+byte-compiling /home/student/anro_ws/src/install/lab2PD/lib/python3.10/site-packages/lab2PD/turtle_action.py to turtle_action.cpython-310.pyc
+byte-compiling /home/student/anro_ws/src/install/lab2PD/lib/python3.10/site-packages/lab2PD/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/student/anro_ws/src/install/lab2PD/share/ament_index
+creating /home/student/anro_ws/src/install/lab2PD/share/ament_index/resource_index
+creating /home/student/anro_ws/src/install/lab2PD/share/ament_index/resource_index/packages
+copying resource/lab2PD -> /home/student/anro_ws/src/install/lab2PD/share/ament_index/resource_index/packages
+copying package.xml -> /home/student/anro_ws/src/install/lab2PD/share/lab2PD
+copying launch/turtle_action_launch.py -> /home/student/anro_ws/src/install/lab2PD/share/lab2PD
+running install_egg_info
+Copying ../build/lab2PD/lab2PD.egg-info to /home/student/anro_ws/src/install/lab2PD/lib/python3.10/site-packages/lab2PD-0.0.0-py3.10.egg-info
+running install_scripts
+Installing turtle_action script to /home/student/anro_ws/src/install/lab2PD/lib/lab2PD
+writing list of installed files to '/home/student/anro_ws/src/build/lab2PD/install.log'
